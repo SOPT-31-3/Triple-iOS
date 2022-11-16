@@ -20,6 +20,9 @@
 		4A585D1329254BEB0090013A /* CreateTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D1229254BEB0090013A /* CreateTravelViewController.swift */; };
 		4A585D1529254C0E0090013A /* MyTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D1429254C0E0090013A /* MyTravelViewController.swift */; };
 		4A585D1729254C3B0090013A /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D1629254C3B0090013A /* MyProfileViewController.swift */; };
+		4AD2C8D429255F4C00EB4A76 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4AD2C8D329255F4C00EB4A76 /* SnapKit */; };
+		4AD2C8D729255F5A00EB4A76 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 4AD2C8D629255F5A00EB4A76 /* Then */; };
+		4AD2C8DA2925601200EB4A76 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4AD2C8D92925601200EB4A76 /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AD2C8D429255F4C00EB4A76 /* SnapKit in Frameworks */,
+				4AD2C8D729255F5A00EB4A76 /* Then in Frameworks */,
+				4AD2C8DA2925601200EB4A76 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +246,11 @@
 			dependencies = (
 			);
 			name = "Triple-iOS";
+			packageProductDependencies = (
+				4AD2C8D329255F4C00EB4A76 /* SnapKit */,
+				4AD2C8D629255F5A00EB4A76 /* Then */,
+				4AD2C8D92925601200EB4A76 /* Moya */,
+			);
 			productName = "Triple-iOS";
 			productReference = 4A585CDC2925399E0090013A /* Triple-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -268,6 +279,11 @@
 				Base,
 			);
 			mainGroup = 4A585CD32925399E0090013A;
+			packageReferences = (
+				4AD2C8D229255F4C00EB4A76 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4AD2C8D529255F5A00EB4A76 /* XCRemoteSwiftPackageReference "Then" */,
+				4AD2C8D82925601200EB4A76 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 4A585CDD2925399E0090013A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -510,6 +526,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4AD2C8D229255F4C00EB4A76 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		4AD2C8D529255F5A00EB4A76 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4AD2C8D82925601200EB4A76 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4AD2C8D329255F4C00EB4A76 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4AD2C8D229255F4C00EB4A76 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		4AD2C8D629255F5A00EB4A76 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4AD2C8D529255F5A00EB4A76 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		4AD2C8D92925601200EB4A76 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4AD2C8D82925601200EB4A76 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A585CD42925399E0090013A /* Project object */;
 }
