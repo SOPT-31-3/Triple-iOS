@@ -12,6 +12,14 @@
 		4A585CE42925399E0090013A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585CE32925399E0090013A /* ViewController.swift */; };
 		4A585CE92925399F0090013A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A585CE82925399F0090013A /* Assets.xcassets */; };
 		4A585CEC2925399F0090013A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A585CEA2925399F0090013A /* LaunchScreen.storyboard */; };
+		4A585D042925466F0090013A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D032925466F0090013A /* Constant.swift */; };
+		4A585D09292546AB0090013A /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D08292546AB0090013A /* UIColor+.swift */; };
+		4A585D0C29254B4F0090013A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D0B29254B4F0090013A /* TabBarController.swift */; };
+		4A585D0E29254B970090013A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D0D29254B970090013A /* HomeViewController.swift */; };
+		4A585D1029254BC00090013A /* WishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D0F29254BC00090013A /* WishViewController.swift */; };
+		4A585D1329254BEB0090013A /* CreateTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D1229254BEB0090013A /* CreateTravelViewController.swift */; };
+		4A585D1529254C0E0090013A /* MyTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D1429254C0E0090013A /* MyTravelViewController.swift */; };
+		4A585D1729254C3B0090013A /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D1629254C3B0090013A /* MyProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		4A585CE82925399F0090013A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A585CEB2925399F0090013A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A585CED2925399F0090013A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A585D032925466F0090013A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		4A585D08292546AB0090013A /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		4A585D0B29254B4F0090013A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4A585D0D29254B970090013A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4A585D0F29254BC00090013A /* WishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishViewController.swift; sourceTree = "<group>"; };
+		4A585D1229254BEB0090013A /* CreateTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTravelViewController.swift; sourceTree = "<group>"; };
+		4A585D1429254C0E0090013A /* MyTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTravelViewController.swift; sourceTree = "<group>"; };
+		4A585D1629254C3B0090013A /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +70,158 @@
 		4A585CDE2925399E0090013A /* Triple-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				4A585CDF2925399E0090013A /* AppDelegate.swift */,
-				4A585CE12925399E0090013A /* SceneDelegate.swift */,
+				4A585CF6292544140090013A /* Global */,
+				4A585CF5292544100090013A /* Network */,
+				4A585CF42925440C0090013A /* Screen */,
+				4A585CF3292544060090013A /* Resource */,
 				4A585CE32925399E0090013A /* ViewController.swift */,
-				4A585CE82925399F0090013A /* Assets.xcassets */,
-				4A585CEA2925399F0090013A /* LaunchScreen.storyboard */,
-				4A585CED2925399F0090013A /* Info.plist */,
 			);
 			path = "Triple-iOS";
+			sourceTree = "<group>";
+		};
+		4A585CF3292544060090013A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4A585CFB2925442F0090013A /* Font */,
+				4A585CFA2925442D0090013A /* Color */,
+				4A585CF9292544290090013A /* Support */,
+				4A585CF8292544210090013A /* Stoaryboard */,
+				4A585CF72925441C0090013A /* Asset */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		4A585CF42925440C0090013A /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				4A585D0A29254B450090013A /* TabBar */,
+				4A585CFD292545590090013A /* Hoho */,
+				4A585CFC292544610090013A /* Dodo */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		4A585CF5292544100090013A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4A585D002925457A0090013A /* Base */,
+				4A585CFF292545750090013A /* APIService */,
+				4A585CFE2925456F0090013A /* DataModel */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4A585CF6292544140090013A /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				4A585D07292546A20090013A /* Extension */,
+				4A585D012925457F0090013A /* Constant */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		4A585CF72925441C0090013A /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				4A585CE82925399F0090013A /* Assets.xcassets */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		4A585CF8292544210090013A /* Stoaryboard */ = {
+			isa = PBXGroup;
+			children = (
+				4A585CEA2925399F0090013A /* LaunchScreen.storyboard */,
+			);
+			path = Stoaryboard;
+			sourceTree = "<group>";
+		};
+		4A585CF9292544290090013A /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				4A585CED2925399F0090013A /* Info.plist */,
+				4A585CDF2925399E0090013A /* AppDelegate.swift */,
+				4A585CE12925399E0090013A /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		4A585CFA2925442D0090013A /* Color */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		4A585CFB2925442F0090013A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		4A585CFC292544610090013A /* Dodo */ = {
+			isa = PBXGroup;
+			children = (
+				4A585D1229254BEB0090013A /* CreateTravelViewController.swift */,
+			);
+			path = Dodo;
+			sourceTree = "<group>";
+		};
+		4A585CFD292545590090013A /* Hoho */ = {
+			isa = PBXGroup;
+			children = (
+				4A585D0D29254B970090013A /* HomeViewController.swift */,
+				4A585D1629254C3B0090013A /* MyProfileViewController.swift */,
+			);
+			path = Hoho;
+			sourceTree = "<group>";
+		};
+		4A585CFE2925456F0090013A /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		4A585CFF292545750090013A /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		4A585D002925457A0090013A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		4A585D012925457F0090013A /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				4A585D032925466F0090013A /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		4A585D07292546A20090013A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4A585D08292546AB0090013A /* UIColor+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4A585D0A29254B450090013A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4A585D0B29254B4F0090013A /* TabBarController.swift */,
+				4A585D0F29254BC00090013A /* WishViewController.swift */,
+				4A585D1429254C0E0090013A /* MyTravelViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +294,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A585D1529254C0E0090013A /* MyTravelViewController.swift in Sources */,
 				4A585CE42925399E0090013A /* ViewController.swift in Sources */,
 				4A585CE02925399E0090013A /* AppDelegate.swift in Sources */,
 				4A585CE22925399E0090013A /* SceneDelegate.swift in Sources */,
+				4A585D1729254C3B0090013A /* MyProfileViewController.swift in Sources */,
+				4A585D0C29254B4F0090013A /* TabBarController.swift in Sources */,
+				4A585D042925466F0090013A /* Constant.swift in Sources */,
+				4A585D1029254BC00090013A /* WishViewController.swift in Sources */,
+				4A585D0E29254B970090013A /* HomeViewController.swift in Sources */,
+				4A585D09292546AB0090013A /* UIColor+.swift in Sources */,
+				4A585D1329254BEB0090013A /* CreateTravelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +444,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Triple-iOS/Info.plist";
+				INFOPLIST_FILE = "Triple-iOS/Resource/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -302,7 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Triple-iOS/Info.plist";
+				INFOPLIST_FILE = "Triple-iOS/Resource/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
