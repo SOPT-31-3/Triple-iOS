@@ -13,7 +13,6 @@ Commit message : `[종류] # 이슈번호 - 작업이름`
 ```
 
 ## **Commit Convention**
----
 - [Fix] : 버그, 오류 해결
 - [Chore] : 코드 수정, 내부 파일 수정
 - [Correct] : 주로 문법의 오류나 타입의 변경, 이름 변경 등에 사용합니다.
@@ -26,7 +25,6 @@ Commit message : `[종류] # 이슈번호 - 작업이름`
 - [Setting] : 프로젝트 설정관련이 있을 때 사용합니다.
 
 ## **Basic Rule**
----
 * commit 하기 전, git status로 변경사항 꼭 확인하기
 * 본인이 변경하지 않은 파일이 변경되었다면 이유를 알아보고 해결하거나, 빼고 커밋
 * 항상 remote의 develop과 같은 상태를 유지하기
