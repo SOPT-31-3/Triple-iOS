@@ -1,0 +1,27 @@
+//
+//  MagazineTableViewCell.swift
+//  Triple-iOS
+//
+//  Created by saint on 2022/11/20.
+//
+
+import UIKit
+
+class MagazineTableViewCell: UITableViewCell {
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        layout()
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension MagazineTableViewCell{
+    private func layout() {
+        
+    }
+}
