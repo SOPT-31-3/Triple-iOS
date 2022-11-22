@@ -16,6 +16,8 @@ class HomeViewController: UIViewController {
         return headerView
     }()
     
+    private let tableHeaderView = UIView()
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "TRIPLE"
@@ -54,11 +56,7 @@ class HomeViewController: UIViewController {
         label.font = .systemFont(ofSize: 24.01.adjusted)
         return label
     }()
-    
-    private lazy var tokyoCollectionView: TokyoCollectionViewController = {
-        let view = TokyoCollectionViewController()
-        return view
-    }()
+
 
     override func viewDidLoad() {
         layout()
@@ -77,7 +75,7 @@ extension HomeViewController {
         view.backgroundColor = .yellow
         
         // MARK: - superView
-        [headerView, baseTableView].forEach{
+        [headerView, tableHeaderView, baseTableView].forEach{
             view.addSubview($0)
         }
         
@@ -86,10 +84,8 @@ extension HomeViewController {
             headerView.addSubview($0)
         }
         
-        // MARK: - scrollView
-        [introLabel].forEach{
-            baseTableView.addSubview($0)
-        }
+        // MARK: - tableView
+        tableHeaderView.addSubview(introLabel)
         
         //scrollView.addSubview(tokyoCollectionView)
         
@@ -123,10 +119,20 @@ extension HomeViewController {
         }
         
         introLabel.snp.makeConstraints{
-            $0.top.equalTo(titleLabel.snp.bottom).offset(48.adjusted)
+            $0.top.equalToSuperview().offset(70.adjusted)
             $0.leading.equalToSuperview().offset(28.adjusted)
         }
+        
+        // tableView에 헤더 추가
+        tableHeaderView.translatesAutoresizingMaskIntoConstraints = false
+        baseTableView.tableHeaderView = tableHeaderView
+        tableHeaderView.snp.makeConstraints{
+            $0.width.equalTo(self.view.bounds.width)
+            $0.height.equalTo(150.adjusted)
+        }
+        tableHeaderView.layoutIfNeeded()
     }
+
     
     private func register() {
         

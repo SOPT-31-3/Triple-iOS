@@ -2,21 +2,21 @@
 //  TokyoCollectionViewCell.swift
 //  Triple-iOS
 //
-//  Created by saint on 2022/11/19.
+//  Created by saint on 2022/11/22.
 //
 
 import UIKit
 
 class TokyoCollectionViewCell: UICollectionViewCell {
-    
-    static let identifier = "TokyoCollectionViewCell"
-    
     private let imageContainerView = UIView()
     private let tokyoImageCell = UIImageView()
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         layout()
+        //dataBind(Tokyo)
     }
     
     required init?(coder: NSCoder) {
@@ -24,7 +24,7 @@ class TokyoCollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension TokyoCollectionViewCell {
+extension TokyoCollectionViewCell{
     
     // MARK: - Layout Helpers
     
@@ -43,10 +43,7 @@ extension TokyoCollectionViewCell {
         }
     }
     
-    // MARK: - General Helpers
-    
     func dataBind(model: TokyoImageModel) {
         tokyoImageCell.image = UIImage(named: model.tokyoImage)
     }
 }
-
