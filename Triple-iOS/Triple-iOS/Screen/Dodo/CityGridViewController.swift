@@ -48,7 +48,7 @@ class CityGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         layout.scrollDirection = .vertical
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = .blue
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.isScrollEnabled = true
         collectionView.showsVerticalScrollIndicator = false
@@ -72,7 +72,7 @@ class CityGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         CityModel(cityImage: "citySearch", cityName: ""),
     ]
     
-    final let kCityInset: UIEdgeInsets = UIEdgeInsets(top: 22, left: 20, bottom: 16, right: 20)
+    final let kCityInset: UIEdgeInsets = UIEdgeInsets(top: 22, left: 20, bottom: 0, right: 20)
     final let kCityLineSpacing: CGFloat = 16
     final let kCityInterItemSpacing: CGFloat = 24
     final let kCellHeight: CGFloat = 96
@@ -129,10 +129,9 @@ extension CityGridViewController {
         
         view.addSubview(cityCollectionView)
         cityCollectionView.snp.makeConstraints {
-            $0.top.equalTo(self.view).offset(199)
-            $0.leading.trailing.equalTo(self.view.safeAreaLayoutGuide)
-            $0.bottom.equalToSuperview()
-            $0.height.equalTo(calculateCellHeight())
+            $0.top.equalTo(headerView.snp.bottom)
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
@@ -152,8 +151,8 @@ extension CityGridViewController: UICollectionViewDelegateFlowLayout {
         let screenWidth = UIScreen.main.bounds.width
         let cellItemForRow: CGFloat = 3
         let minimunSpacing: CGFloat = 24
-        let width = (screenWidth - 39 - minimunSpacing * 2) / cellItemForRow // 셀 하나의 너비
-        return CGSize(width: width, height: 96)
+        let width = (screenWidth - minimunSpacing * 2) / cellItemForRow // 셀 하나의 너비
+        return CGSize(width: 96, height: 96)
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
