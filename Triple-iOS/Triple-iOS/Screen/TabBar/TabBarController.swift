@@ -28,7 +28,7 @@ extension TabBarController {
         let wishTap = UINavigationController(rootViewController: WishViewController())
         wishTap.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "wish")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "wishSelected")?.withRenderingMode(.alwaysOriginal))
         
-        let createTravelTap = UINavigationController(rootViewController: CreateTravelViewController())
+        let createTravelTap = UINavigationController(rootViewController: CityGridViewController())
         createTravelTap.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "createTravel")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "createTravel")?.withRenderingMode(.alwaysOriginal))
         
         let myTravelTap = UINavigationController(rootViewController: MyTravelViewController())
