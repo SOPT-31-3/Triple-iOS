@@ -17,7 +17,6 @@
 		4A585D0E29254B970090013A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D0D29254B970090013A /* HomeViewController.swift */; };
 		4A585D1029254BC00090013A /* WishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D0F29254BC00090013A /* WishViewController.swift */; };
 		4A585D1529254C0E0090013A /* MyTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D1429254C0E0090013A /* MyTravelViewController.swift */; };
-		4A585D1729254C3B0090013A /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A585D1629254C3B0090013A /* MyProfileViewController.swift */; };
 		4AD2C8D429255F4C00EB4A76 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4AD2C8D329255F4C00EB4A76 /* SnapKit */; };
 		4AD2C8D729255F5A00EB4A76 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 4AD2C8D629255F5A00EB4A76 /* Then */; };
 		4AD2C8DA2925601200EB4A76 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4AD2C8D92925601200EB4A76 /* Moya */; };
@@ -25,10 +24,19 @@
 		4AD2C8DE2925606400EB4A76 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2C8DD2925606400EB4A76 /* Base.swift */; };
 		4AD2C8E02925606A00EB4A76 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2C8DF2925606A00EB4A76 /* APIService.swift */; };
 		4AD2C8E22925606E00EB4A76 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2C8E12925606E00EB4A76 /* DataModel.swift */; };
-		987F68EA2927D14700E48C18 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 987F68E92927D14700E48C18 /* NotoSansCJKkr-Bold.otf */; };
 		987F68EC2928519B00E48C18 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68EB2928519B00E48C18 /* CityModel.swift */; };
 		987F68F02928528100E48C18 /* CityGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68EF2928528100E48C18 /* CityGridViewController.swift */; };
 		987F68F229285A3600E48C18 /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68F129285A3600E48C18 /* CityCollectionViewCell.swift */; };
+		853F92FF292632F400E8D10B /* Adjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853F92FE292632F400E8D10B /* Adjusted.swift */; };
+		853F93032927FE6000E8D10B /* TokyoImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853F93022927FE6000E8D10B /* TokyoImageModel.swift */; };
+		85C0F0DD29293101001580D2 /* TokyoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0DC29293101001580D2 /* TokyoTableViewCell.swift */; };
+		85C0F0DF29293125001580D2 /* IconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0DE29293125001580D2 /* IconTableViewCell.swift */; };
+		85C0F0E129293136001580D2 /* PopularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0E029293136001580D2 /* PopularTableViewCell.swift */; };
+		85C0F0E3292931A4001580D2 /* RecentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0E2292931A4001580D2 /* RecentTableViewCell.swift */; };
+		85C0F0E5292931BB001580D2 /* MagazineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0E4292931BB001580D2 /* MagazineTableViewCell.swift */; };
+		85C0F0E729293AA9001580D2 /* GetClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0E629293AA9001580D2 /* GetClassName.swift */; };
+		85FE40C0292B7405007E5723 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40BF292B7405007E5723 /* MyProfileViewController.swift */; };
+		85FE40C3292CAB7B007E5723 /* TokyoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40C2292CAB7B007E5723 /* TokyoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,15 +52,23 @@
 		4A585D0D29254B970090013A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4A585D0F29254BC00090013A /* WishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishViewController.swift; sourceTree = "<group>"; };
 		4A585D1429254C0E0090013A /* MyTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTravelViewController.swift; sourceTree = "<group>"; };
-		4A585D1629254C3B0090013A /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		4AD2C8DB2925603500EB4A76 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		4AD2C8DD2925606400EB4A76 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		4AD2C8DF2925606A00EB4A76 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		4AD2C8E12925606E00EB4A76 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		987F68E92927D14700E48C18 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
 		987F68EB2928519B00E48C18 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		987F68EF2928528100E48C18 /* CityGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGridViewController.swift; sourceTree = "<group>"; };
 		987F68F129285A3600E48C18 /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
+		853F92FE292632F400E8D10B /* Adjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjusted.swift; sourceTree = "<group>"; };
+		853F93022927FE6000E8D10B /* TokyoImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokyoImageModel.swift; sourceTree = "<group>"; };
+		85C0F0DC29293101001580D2 /* TokyoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokyoTableViewCell.swift; sourceTree = "<group>"; };
+		85C0F0DE29293125001580D2 /* IconTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTableViewCell.swift; sourceTree = "<group>"; };
+		85C0F0E029293136001580D2 /* PopularTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTableViewCell.swift; sourceTree = "<group>"; };
+		85C0F0E2292931A4001580D2 /* RecentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTableViewCell.swift; sourceTree = "<group>"; };
+		85C0F0E4292931BB001580D2 /* MagazineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewCell.swift; sourceTree = "<group>"; };
+		85C0F0E629293AA9001580D2 /* GetClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClassName.swift; sourceTree = "<group>"; };
+		85FE40BF292B7405007E5723 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		85FE40C2292CAB7B007E5723 /* TokyoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokyoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				4A585D0D29254B970090013A /* HomeViewController.swift */,
-				4A585D1629254C3B0090013A /* MyProfileViewController.swift */,
+				85C0F0DB292930C1001580D2 /* TableViewCells */,
+				853F93062928045B00E8D10B /* TokyoCollectionView */,
+				85C0F0E82929412B001580D2 /* Support */,
 			);
 			path = Hoho;
 			sourceTree = "<group>";
@@ -228,16 +246,47 @@
 				4A585D0B29254B4F0090013A /* TabBarController.swift */,
 				4A585D0F29254BC00090013A /* WishViewController.swift */,
 				4A585D1429254C0E0090013A /* MyTravelViewController.swift */,
+				85FE40BF292B7405007E5723 /* MyProfileViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		987F68E82927D11800E48C18 /* Font */ = {
+		853F93062928045B00E8D10B /* TokyoCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				987F68E92927D14700E48C18 /* NotoSansCJKkr-Bold.otf */,
 			);
-			path = Font;
+			path = TokyoCollectionView;
+			sourceTree = "<group>";
+		};
+		85C0F0DB292930C1001580D2 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				85FE40C1292CAB57007E5723 /* TokyoTableView */,
+				85C0F0DE29293125001580D2 /* IconTableViewCell.swift */,
+				85C0F0E029293136001580D2 /* PopularTableViewCell.swift */,
+				85C0F0E2292931A4001580D2 /* RecentTableViewCell.swift */,
+				85C0F0E4292931BB001580D2 /* MagazineTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		85C0F0E82929412B001580D2 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				853F92FE292632F400E8D10B /* Adjusted.swift */,
+				85C0F0E629293AA9001580D2 /* GetClassName.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		85FE40C1292CAB57007E5723 /* TokyoTableView */ = {
+			isa = PBXGroup;
+			children = (
+				853F93022927FE6000E8D10B /* TokyoImageModel.swift */,
+				85C0F0DC29293101001580D2 /* TokyoTableViewCell.swift */,
+				85FE40C2292CAB7B007E5723 /* TokyoCollectionViewCell.swift */,
+			);
+			path = TokyoTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,21 +370,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C0F0DD29293101001580D2 /* TokyoTableViewCell.swift in Sources */,
 				4A585D1529254C0E0090013A /* MyTravelViewController.swift in Sources */,
 				4AD2C8DC2925603500EB4A76 /* Image.swift in Sources */,
 				4A585CE02925399E0090013A /* AppDelegate.swift in Sources */,
 				987F68F229285A3600E48C18 /* CityCollectionViewCell.swift in Sources */,
 				4A585CE22925399E0090013A /* SceneDelegate.swift in Sources */,
+				85C0F0E3292931A4001580D2 /* RecentTableViewCell.swift in Sources */,
+				85FE40C0292B7405007E5723 /* MyProfileViewController.swift in Sources */,
 				4AD2C8E22925606E00EB4A76 /* DataModel.swift in Sources */,
 				987F68F02928528100E48C18 /* CityGridViewController.swift in Sources */,
 				987F68EC2928519B00E48C18 /* CityModel.swift in Sources */,
+				85C0F0E729293AA9001580D2 /* GetClassName.swift in Sources */,
+				85C0F0DF29293125001580D2 /* IconTableViewCell.swift in Sources */,
 				4AD2C8DE2925606400EB4A76 /* Base.swift in Sources */,
-				4A585D1729254C3B0090013A /* MyProfileViewController.swift in Sources */,
 				4A585D0C29254B4F0090013A /* TabBarController.swift in Sources */,
+				85C0F0E129293136001580D2 /* PopularTableViewCell.swift in Sources */,
+				853F93032927FE6000E8D10B /* TokyoImageModel.swift in Sources */,
 				4AD2C8E02925606A00EB4A76 /* APIService.swift in Sources */,
+				853F92FF292632F400E8D10B /* Adjusted.swift in Sources */,
 				4A585D042925466F0090013A /* Constant.swift in Sources */,
 				4A585D1029254BC00090013A /* WishViewController.swift in Sources */,
+				85FE40C3292CAB7B007E5723 /* TokyoCollectionViewCell.swift in Sources */,
 				4A585D0E29254B970090013A /* HomeViewController.swift in Sources */,
+				85C0F0E5292931BB001580D2 /* MagazineTableViewCell.swift in Sources */,
 				4A585D09292546AB0090013A /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
