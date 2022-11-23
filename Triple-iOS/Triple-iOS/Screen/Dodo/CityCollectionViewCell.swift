@@ -30,7 +30,6 @@ class CityCollectionViewCell: UICollectionViewCell {
 
 extension CityCollectionViewCell {
     private func setLayout(){
-        contentView.backgroundColor = .gray
         
         addSubview(cityImageView)
         cityImageView.addSubview(nameLabel)

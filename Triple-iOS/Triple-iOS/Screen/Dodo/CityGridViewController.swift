@@ -48,7 +48,7 @@ class CityGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         layout.scrollDirection = .vertical
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .blue
+        collectionView.backgroundColor = .clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.isScrollEnabled = true
         collectionView.showsVerticalScrollIndicator = false
@@ -72,7 +72,7 @@ class CityGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         CityModel(cityImage: "citySearch", cityName: ""),
     ]
     
-    final let kCityInset: UIEdgeInsets = UIEdgeInsets(top: 22, left: 20, bottom: 0, right: 20)
+    final let kCityInset: UIEdgeInsets = UIEdgeInsets(top: 22, left: 20, bottom: 0, right: 19)
     final let kCityLineSpacing: CGFloat = 16
     final let kCityInterItemSpacing: CGFloat = 24
     final let kCellHeight: CGFloat = 96
@@ -149,10 +149,10 @@ extension CityGridViewController {
 extension CityGridViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width
-        let cellItemForRow: CGFloat = 3
-        let minimunSpacing: CGFloat = 24
-        let width = (screenWidth - minimunSpacing * 2) / cellItemForRow // 셀 하나의 너비
-        return CGSize(width: 96, height: 96)
+        let cellForItemRow: CGFloat = 3
+        let minimumSpacing: CGFloat = 24
+        let width = (screenWidth - 39 - minimumSpacing * 2) / cellForItemRow
+        return CGSize(width: width, height: 96)
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
