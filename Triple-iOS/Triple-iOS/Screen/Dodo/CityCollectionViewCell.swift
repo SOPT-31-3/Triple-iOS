@@ -30,20 +30,16 @@ class CityCollectionViewCell: UICollectionViewCell {
 
 extension CityCollectionViewCell {
     private func setLayout(){
-        contentView.backgroundColor = .gray
         
-        [cityImageView, nameLabel].forEach {
-            contentView.addSubview($0)
-        }
+        addSubview(cityImageView)
+        cityImageView.addSubview(nameLabel)
         
         cityImageView.snp.makeConstraints {
-            $0.top.leading.trailing.height.equalToSuperview()
-//            $0.width.equalTo(96)
-//            $0.height.equalTo(96)
+            $0.edges.equalToSuperview()
+            $0.height.width.equalTo(96)
         }
         nameLabel.snp.makeConstraints {
-            $0.top.equalTo(self.cityImageView.snp.top).offset(36)
-            $0.leading.equalTo(self.cityImageView.snp.leading).offset(38)
+            $0.centerX.centerY.equalToSuperview()
         }
     }
     
