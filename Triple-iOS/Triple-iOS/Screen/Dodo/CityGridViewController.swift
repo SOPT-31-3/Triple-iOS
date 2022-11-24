@@ -24,6 +24,7 @@ class CityGridViewController: UIViewController {
     let headerLabel1:UILabel = {
         let label = UILabel()
         label.text = "떠나고 싶은\n도시를 선택하세요."
+        label.font = .systemFont(ofSize: 24.01, weight: .bold)
         label.textColor = .white
         label.numberOfLines = 0
         return label
@@ -72,23 +73,22 @@ class CityGridViewController: UIViewController {
         setLayout()
         register()
         configButton()
-
     }
 
 }
+
 extension CityGridViewController {
-    @objc func touchupCloseButton(){
+    @objc
+    private func touchupCloseButton(){
         let previousVC = HomeViewController()
         previousVC.modalPresentationStyle = .fullScreen
         self.present(previousVC, animated: true, completion: nil)
     }
     
-    func configButton(){
+    private func configButton(){
         closeButton.setBackgroundImage(Constant.Image.icX, for: .normal)
     }
 }
-
-
 
 extension CityGridViewController {
     private func setLayout(){
@@ -111,7 +111,7 @@ extension CityGridViewController {
         }
         
         headerLabel1.snp.makeConstraints {
-            $0.top.equalTo(self.closeButton.snp.bottom).offset(22)
+            $0.bottom.equalTo(self.headerView.snp.bottom).offset(-20)
             $0.leading.equalTo(self.view.safeAreaLayoutGuide).offset(28)
         }
         
@@ -149,12 +149,10 @@ extension CityGridViewController: UICollectionViewDelegateFlowLayout, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch indexPath.item {
-        case 1:
+        if indexPath.item == 1 {
             let planVC = MakePlanViewController()
+            planVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
             self.present(planVC, animated: true)
-        default:
-            print("hi")
         }
     }
     

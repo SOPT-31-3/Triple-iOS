@@ -11,5 +11,9 @@ extension Constant {
     struct Image {
         // 상수화 해서 사용
         static let icX = UIImage(named: "icX")!
+        
+        static let friend = UIImage(named: "friend")!
+        
+        static let menu = UIImage(named: "menu")!
     }
 }
