@@ -8,29 +8,7 @@
 import UIKit
 import SnapKit
 
-class CityGridViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return CityList.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cityCell = collectionView.dequeueReusableCell(
-                    withReuseIdentifier: CityCollectionViewCell.identifier, for: indexPath)
-                    as? CityCollectionViewCell else { return UICollectionViewCell() }
-        cityCell.dataBind(model: CityList[indexPath.item])
-        return cityCell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch indexPath.item {
-        case 1:
-            let planVC = MakePlanViewController()
-            self.present(planVC, animated: true)
-        default:
-            print("hi")
-        }
-    }
-    
+class CityGridViewController: UIViewController {
     let headerView:UIView = {
         let view = UIView()
         view.backgroundColor = .green
@@ -76,8 +54,8 @@ class CityGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         CityModel(cityImage: "city7", cityName: "체코"),
         CityModel(cityImage: "city8", cityName: "런던"),
         CityModel(cityImage: "city9", cityName: "리옹"),
-        CityModel(cityImage: "city10", cityName: "뉴욕"),
-        CityModel(cityImage: "city11", cityName: "뉴욕"),
+        CityModel(cityImage: "city10", cityName: "뮌헨"),
+        CityModel(cityImage: "city11", cityName: "도쿄"),
         CityModel(cityImage: "citySearch", cityName: ""),
     ]
     
@@ -156,7 +134,30 @@ extension CityGridViewController {
     }
 }
 
-extension CityGridViewController: UICollectionViewDelegateFlowLayout {
+extension CityGridViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return CityList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cityCell = collectionView.dequeueReusableCell(
+                    withReuseIdentifier: CityCollectionViewCell.identifier, for: indexPath)
+                    as? CityCollectionViewCell else { return UICollectionViewCell() }
+        cityCell.dataBind(model: CityList[indexPath.item])
+        return cityCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.item {
+        case 1:
+            let planVC = MakePlanViewController()
+            self.present(planVC, animated: true)
+        default:
+            print("hi")
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width
         let cellForItemRow: CGFloat = 3
