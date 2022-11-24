@@ -21,6 +21,16 @@ class CityGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         return cityCell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.item {
+        case 1:
+            let planVC = MakePlanViewController()
+            self.present(planVC, animated: true)
+        default:
+            print("hi")
+        }
+    }
+    
     let headerView:UIView = {
         let view = UIView()
         view.backgroundColor = .green
@@ -38,7 +48,6 @@ class CityGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         label.text = "떠나고 싶은\n도시를 선택하세요."
         label.textColor = .white
         label.numberOfLines = 0
-        label.font = UIFont(name: "NotoSansCJKKR-Bold", size: 24.01)
         return label
     }()
     
@@ -46,7 +55,7 @@ class CityGridViewController: UIViewController, UICollectionViewDelegate, UIColl
     private lazy var cityCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        
+
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -81,6 +90,7 @@ class CityGridViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         self.view.backgroundColor = .white
         tabBarController?.tabBar.isHidden = true
+        
         setLayout()
         register()
         configButton()
@@ -153,17 +163,17 @@ extension CityGridViewController: UICollectionViewDelegateFlowLayout {
         let minimumSpacing: CGFloat = 24
         let width = (screenWidth - 39 - minimumSpacing * 2) / cellForItemRow
         return CGSize(width: width, height: 96)
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-            return kCityLineSpacing
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            return kCityInterItemSpacing
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-            return kCityInset
-        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return kCityLineSpacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return kCityInterItemSpacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return kCityInset
+    }
 }
