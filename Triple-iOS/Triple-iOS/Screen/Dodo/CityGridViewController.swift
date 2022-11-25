@@ -80,7 +80,7 @@ class CityGridViewController: UIViewController {
 extension CityGridViewController {
     @objc
     private func touchupCloseButton(){
-        let previousVC = HomeViewController()
+        let previousVC = TabBarController()
         previousVC.modalPresentationStyle = .fullScreen
         self.present(previousVC, animated: true, completion: nil)
     }
@@ -152,8 +152,7 @@ extension CityGridViewController: UICollectionViewDelegateFlowLayout, UICollecti
         if indexPath.item == 1 {
 //            let planVC = MakePlanViewController()
             let planVC = PlanViewController()
-            planVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-            self.present(planVC, animated: true)
+            self.navigationController?.pushViewController(planVC, animated: true)
         }
     }
     

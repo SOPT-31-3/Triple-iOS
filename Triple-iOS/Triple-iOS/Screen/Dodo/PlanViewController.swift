@@ -25,7 +25,7 @@ class PlanViewController: UIViewController {
         return button
     }()
     
-    lazy var friendButton:UIButton = {
+    let friendButton:UIButton = {
         let button = UIButton()
         return button
     }()
@@ -41,12 +41,12 @@ class PlanViewController: UIViewController {
     
     let menuImgView = UIImageView()
     
-    let saveButton:UIButton = {
+    lazy var saveButton:UIButton = {
         let button = UIButton()
         button.setTitle("전체 저장", for: .normal)
         button.setTitleColor(UIColor.white , for: .normal)
         button.addTarget(self, action: #selector(touchupSaveButton), for: .touchUpInside)
-        button.backgroundColor = .lightGray
+        button.backgroundColor = .green
         return button
     }()
     
@@ -68,12 +68,12 @@ class PlanViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.completionButton(isOn: false)
         setLayout()
         register()
         config()
         configButton()
         configImageView()
+        navibarHideen()
     }
 }
 
@@ -97,14 +97,11 @@ extension PlanViewController {
         closeButton.snp.makeConstraints {
             $0.top.equalTo(self.view).offset(53)
             $0.leading.equalTo(self.view.safeAreaLayoutGuide).offset(24)
-            $0.width.height.equalTo(24)
         }
         
         friendButton.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(10)
             $0.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-18)
-            $0.width.equalTo(72)
-            $0.height.equalTo(36)
         }
         
         headerLabel1.snp.makeConstraints {
@@ -120,9 +117,7 @@ extension PlanViewController {
         }
         
         saveButton.snp.makeConstraints {
-            $0.bottom.equalTo(self.view.snp.bottom)
-            $0.leading.trailing.equalTo(self.view.safeAreaLayoutGuide)
-            $0.width.equalTo(375)
+            $0.leading.trailing.bottom.equalToSuperview()
             $0.height.equalTo(63)
         }
         
@@ -143,17 +138,20 @@ extension PlanViewController {
         listTableView.register(PlanTableViewCell.self, forCellReuseIdentifier: PlanTableViewCell.identifier)
     }
     
+    private func navibarHideen() {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     @objc
     private func touchupCloseButton(){
-        let previousVC = CityGridViewController()
-        previousVC.modalPresentationStyle = .fullScreen
-        self.present(previousVC, animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc
     private func touchupSaveButton(){
-        let nextVC = HomeViewController()
+        let nextVC = TabBarController()
         nextVC.modalPresentationStyle = .fullScreen
+        nextVC.modalTransitionStyle = .crossDissolve
         self.present(nextVC, animated: true, completion: nil)
     }
     
@@ -188,7 +186,7 @@ extension PlanViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension PlanViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 18
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -211,18 +209,5 @@ extension PlanViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 45
         // 푸터섹션 높이
-    }
-}
-
-extension PlanViewController {
-    func completionButton(isOn: Bool){
-        switch isOn{
-        case true:
-            saveButton.isEnabled = true
-            saveButton.backgroundColor = .green
-        case false:
-            saveButton.isEnabled = false
-            saveButton.backgroundColor = .systemGray
-        }
     }
 }
