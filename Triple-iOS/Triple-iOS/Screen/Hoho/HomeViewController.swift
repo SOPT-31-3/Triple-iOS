@@ -119,7 +119,7 @@ extension HomeViewController {
         }
         
         introLabel.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(70.adjusted)
+            $0.top.equalToSuperview().inset(35.adjusted)
             $0.leading.equalToSuperview().offset(28.adjusted)
         }
         
@@ -128,7 +128,7 @@ extension HomeViewController {
         baseTableView.tableHeaderView = tableHeaderView
         tableHeaderView.snp.makeConstraints{
             $0.width.equalTo(self.view.bounds.width)
-            $0.height.equalTo(150.adjusted)
+            $0.height.equalTo(110.adjusted)
         }
         tableHeaderView.layoutIfNeeded()
     }
