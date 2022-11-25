@@ -171,10 +171,12 @@ extension PlanViewController {
 extension PlanViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
+        // 전체 섹션이 몇개인지
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
+        // 한 섹션당 셀이 몇개인지
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -203,10 +205,12 @@ extension PlanViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
+        // 헤더섹션 높이
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 45
+        // 푸터섹션 높이
     }
 }
 
