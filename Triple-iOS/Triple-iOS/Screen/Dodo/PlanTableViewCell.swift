@@ -11,7 +11,7 @@ import SnapKit
 import Then
 
 // MARK: - ListTableViewCell
-class PlanTableViewCell: UITableViewCell {
+class PlanTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     // MARK: - Identifier
     
@@ -24,7 +24,7 @@ class PlanTableViewCell: UITableViewCell {
         return view
     }()
     
-    private let timeTextField: UITextField = {
+    let timeTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
         textField.placeholder = "00:00"
@@ -49,6 +49,8 @@ class PlanTableViewCell: UITableViewCell {
         layout()
         config()
         configImageView()
+        timeTextField.delegate = self
+        contentTextField.delegate = self
     }
     
     required init?(coder: NSCoder) {
