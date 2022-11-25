@@ -24,9 +24,6 @@
 		4AD2C8DE2925606400EB4A76 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2C8DD2925606400EB4A76 /* Base.swift */; };
 		4AD2C8E02925606A00EB4A76 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2C8DF2925606A00EB4A76 /* APIService.swift */; };
 		4AD2C8E22925606E00EB4A76 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2C8E12925606E00EB4A76 /* DataModel.swift */; };
-		987F68EC2928519B00E48C18 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68EB2928519B00E48C18 /* CityModel.swift */; };
-		987F68F02928528100E48C18 /* CityGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68EF2928528100E48C18 /* CityGridViewController.swift */; };
-		987F68F229285A3600E48C18 /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68F129285A3600E48C18 /* CityCollectionViewCell.swift */; };
 		853F92FF292632F400E8D10B /* Adjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853F92FE292632F400E8D10B /* Adjusted.swift */; };
 		853F93032927FE6000E8D10B /* TokyoImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853F93022927FE6000E8D10B /* TokyoImageModel.swift */; };
 		85C0F0DD29293101001580D2 /* TokyoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0DC29293101001580D2 /* TokyoTableViewCell.swift */; };
@@ -37,6 +34,14 @@
 		85C0F0E729293AA9001580D2 /* GetClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0E629293AA9001580D2 /* GetClassName.swift */; };
 		85FE40C0292B7405007E5723 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40BF292B7405007E5723 /* MyProfileViewController.swift */; };
 		85FE40C3292CAB7B007E5723 /* TokyoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40C2292CAB7B007E5723 /* TokyoCollectionViewCell.swift */; };
+		987F68EC2928519B00E48C18 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68EB2928519B00E48C18 /* CityModel.swift */; };
+		987F68F02928528100E48C18 /* CityGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68EF2928528100E48C18 /* CityGridViewController.swift */; };
+		987F68F229285A3600E48C18 /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68F129285A3600E48C18 /* CityCollectionViewCell.swift */; };
+		9898318A29308D9300F24C83 /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898318929308D9300F24C83 /* PlanTableViewCell.swift */; };
+		9898318C29308DD100F24C83 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898318B29308DD100F24C83 /* SampleModel.swift */; };
+		9898318E29308E3C00F24C83 /* PlanHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898318D29308E3C00F24C83 /* PlanHeaderView.swift */; };
+		9898319029308E6400F24C83 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898318F29308E6400F24C83 /* PlanViewController.swift */; };
+		989831922930AED800F24C83 /* PlanFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989831912930AED800F24C83 /* PlanFooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,9 +61,6 @@
 		4AD2C8DD2925606400EB4A76 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		4AD2C8DF2925606A00EB4A76 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		4AD2C8E12925606E00EB4A76 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		987F68EB2928519B00E48C18 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
-		987F68EF2928528100E48C18 /* CityGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGridViewController.swift; sourceTree = "<group>"; };
-		987F68F129285A3600E48C18 /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
 		853F92FE292632F400E8D10B /* Adjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjusted.swift; sourceTree = "<group>"; };
 		853F93022927FE6000E8D10B /* TokyoImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokyoImageModel.swift; sourceTree = "<group>"; };
 		85C0F0DC29293101001580D2 /* TokyoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokyoTableViewCell.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 		85C0F0E629293AA9001580D2 /* GetClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClassName.swift; sourceTree = "<group>"; };
 		85FE40BF292B7405007E5723 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		85FE40C2292CAB7B007E5723 /* TokyoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokyoCollectionViewCell.swift; sourceTree = "<group>"; };
+		987F68EB2928519B00E48C18 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		987F68EF2928528100E48C18 /* CityGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGridViewController.swift; sourceTree = "<group>"; };
+		987F68F129285A3600E48C18 /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
+		9898318929308D9300F24C83 /* PlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
+		9898318B29308DD100F24C83 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
+		9898318D29308E3C00F24C83 /* PlanHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanHeaderView.swift; sourceTree = "<group>"; };
+		9898318F29308E6400F24C83 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		989831912930AED800F24C83 /* PlanFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanFooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +164,6 @@
 		4A585CF72925441C0090013A /* Asset */ = {
 			isa = PBXGroup;
 			children = (
-				987F68E82927D11800E48C18 /* Font */,
 				4A585CE82925399F0090013A /* Assets.xcassets */,
 			);
 			path = Asset;
@@ -183,6 +192,11 @@
 			children = (
 				987F68EF2928528100E48C18 /* CityGridViewController.swift */,
 				987F68F129285A3600E48C18 /* CityCollectionViewCell.swift */,
+				9898318929308D9300F24C83 /* PlanTableViewCell.swift */,
+				9898318B29308DD100F24C83 /* SampleModel.swift */,
+				9898318D29308E3C00F24C83 /* PlanHeaderView.swift */,
+				9898318F29308E6400F24C83 /* PlanViewController.swift */,
+				989831912930AED800F24C83 /* PlanFooterView.swift */,
 			);
 			path = Dodo;
 			sourceTree = "<group>";
@@ -359,7 +373,6 @@
 			files = (
 				4A585CEC2925399F0090013A /* LaunchScreen.storyboard in Resources */,
 				4A585CE92925399F0090013A /* Assets.xcassets in Resources */,
-				987F68EA2927D14700E48C18 /* NotoSansCJKkr-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +384,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				85C0F0DD29293101001580D2 /* TokyoTableViewCell.swift in Sources */,
+				9898318E29308E3C00F24C83 /* PlanHeaderView.swift in Sources */,
+				9898318A29308D9300F24C83 /* PlanTableViewCell.swift in Sources */,
 				4A585D1529254C0E0090013A /* MyTravelViewController.swift in Sources */,
 				4AD2C8DC2925603500EB4A76 /* Image.swift in Sources */,
 				4A585CE02925399E0090013A /* AppDelegate.swift in Sources */,
@@ -386,6 +401,7 @@
 				4AD2C8DE2925606400EB4A76 /* Base.swift in Sources */,
 				4A585D0C29254B4F0090013A /* TabBarController.swift in Sources */,
 				85C0F0E129293136001580D2 /* PopularTableViewCell.swift in Sources */,
+				9898318C29308DD100F24C83 /* SampleModel.swift in Sources */,
 				853F93032927FE6000E8D10B /* TokyoImageModel.swift in Sources */,
 				4AD2C8E02925606A00EB4A76 /* APIService.swift in Sources */,
 				853F92FF292632F400E8D10B /* Adjusted.swift in Sources */,
@@ -393,7 +409,9 @@
 				4A585D1029254BC00090013A /* WishViewController.swift in Sources */,
 				85FE40C3292CAB7B007E5723 /* TokyoCollectionViewCell.swift in Sources */,
 				4A585D0E29254B970090013A /* HomeViewController.swift in Sources */,
+				9898319029308E6400F24C83 /* PlanViewController.swift in Sources */,
 				85C0F0E5292931BB001580D2 /* MagazineTableViewCell.swift in Sources */,
+				989831922930AED800F24C83 /* PlanFooterView.swift in Sources */,
 				4A585D09292546AB0090013A /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
