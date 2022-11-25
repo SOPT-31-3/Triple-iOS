@@ -31,9 +31,17 @@
 		85C0F0E129293136001580D2 /* PopularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0E029293136001580D2 /* PopularTableViewCell.swift */; };
 		85C0F0E3292931A4001580D2 /* RecentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0E2292931A4001580D2 /* RecentTableViewCell.swift */; };
 		85C0F0E5292931BB001580D2 /* MagazineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0E4292931BB001580D2 /* MagazineTableViewCell.swift */; };
-		85C0F0E729293AA9001580D2 /* GetClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0E629293AA9001580D2 /* GetClassName.swift */; };
 		85FE40C0292B7405007E5723 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40BF292B7405007E5723 /* MyProfileViewController.swift */; };
 		85FE40C3292CAB7B007E5723 /* TokyoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40C2292CAB7B007E5723 /* TokyoCollectionViewCell.swift */; };
+		85FE40C6292E70E5007E5723 /* ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40C5292E70E5007E5723 /* ClassName.swift */; };
+		85FE40CD292EA948007E5723 /* PopularImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40CC292EA948007E5723 /* PopularImageModel.swift */; };
+		85FE40CF292EABC7007E5723 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40CE292EABC7007E5723 /* PopularCollectionViewCell.swift */; };
+		85FE40D3292F754C007E5723 /* RecentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40D2292F754C007E5723 /* RecentCollectionViewCell.swift */; };
+		85FE40D5293046F9007E5723 /* RecentImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40D4293046F9007E5723 /* RecentImageModel.swift */; };
+		85FE40DA29307499007E5723 /* MagazineImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40D929307499007E5723 /* MagazineImageModel.swift */; };
+		85FE40DD293074BF007E5723 /* MagazineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40DC293074BF007E5723 /* MagazineCollectionViewCell.swift */; };
+		85FE40DF2930795B007E5723 /* IconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40DE2930795B007E5723 /* IconModel.swift */; };
+		85FE40E1293079A0007E5723 /* IconCollectionViewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40E0293079A0007E5723 /* IconCollectionViewcell.swift */; };
 		987F68EC2928519B00E48C18 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68EB2928519B00E48C18 /* CityModel.swift */; };
 		987F68F02928528100E48C18 /* CityGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68EF2928528100E48C18 /* CityGridViewController.swift */; };
 		987F68F229285A3600E48C18 /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68F129285A3600E48C18 /* CityCollectionViewCell.swift */; };
@@ -68,9 +76,17 @@
 		85C0F0E029293136001580D2 /* PopularTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTableViewCell.swift; sourceTree = "<group>"; };
 		85C0F0E2292931A4001580D2 /* RecentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTableViewCell.swift; sourceTree = "<group>"; };
 		85C0F0E4292931BB001580D2 /* MagazineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewCell.swift; sourceTree = "<group>"; };
-		85C0F0E629293AA9001580D2 /* GetClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClassName.swift; sourceTree = "<group>"; };
 		85FE40BF292B7405007E5723 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		85FE40C2292CAB7B007E5723 /* TokyoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokyoCollectionViewCell.swift; sourceTree = "<group>"; };
+		85FE40C5292E70E5007E5723 /* ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassName.swift; sourceTree = "<group>"; };
+		85FE40CC292EA948007E5723 /* PopularImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularImageModel.swift; sourceTree = "<group>"; };
+		85FE40CE292EABC7007E5723 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
+		85FE40D2292F754C007E5723 /* RecentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCollectionViewCell.swift; sourceTree = "<group>"; };
+		85FE40D4293046F9007E5723 /* RecentImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentImageModel.swift; sourceTree = "<group>"; };
+		85FE40D929307499007E5723 /* MagazineImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineImageModel.swift; sourceTree = "<group>"; };
+		85FE40DC293074BF007E5723 /* MagazineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineCollectionViewCell.swift; sourceTree = "<group>"; };
+		85FE40DE2930795B007E5723 /* IconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModel.swift; sourceTree = "<group>"; };
+		85FE40E0293079A0007E5723 /* IconCollectionViewcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewcell.swift; sourceTree = "<group>"; };
 		987F68EB2928519B00E48C18 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		987F68EF2928528100E48C18 /* CityGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGridViewController.swift; sourceTree = "<group>"; };
 		987F68F129285A3600E48C18 /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -206,7 +222,6 @@
 			children = (
 				4A585D0D29254B970090013A /* HomeViewController.swift */,
 				85C0F0DB292930C1001580D2 /* TableViewCells */,
-				853F93062928045B00E8D10B /* TokyoCollectionView */,
 				85C0F0E82929412B001580D2 /* Support */,
 			);
 			path = Hoho;
@@ -265,21 +280,14 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		853F93062928045B00E8D10B /* TokyoCollectionView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TokyoCollectionView;
-			sourceTree = "<group>";
-		};
 		85C0F0DB292930C1001580D2 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				85FE40C1292CAB57007E5723 /* TokyoTableView */,
-				85C0F0DE29293125001580D2 /* IconTableViewCell.swift */,
-				85C0F0E029293136001580D2 /* PopularTableViewCell.swift */,
-				85C0F0E2292931A4001580D2 /* RecentTableViewCell.swift */,
-				85C0F0E4292931BB001580D2 /* MagazineTableViewCell.swift */,
+				85FE40C1292CAB57007E5723 /* TokyoCollectionView */,
+				85FE40C7292EA3E0007E5723 /* IconCollectionView */,
+				85FE40C8292EA3F4007E5723 /* PopularCollectionView */,
+				85FE40C9292EA52A007E5723 /* RecentCollectionView */,
+				85FE40CB292EA547007E5723 /* MagazineCollectionView */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -288,19 +296,59 @@
 			isa = PBXGroup;
 			children = (
 				853F92FE292632F400E8D10B /* Adjusted.swift */,
-				85C0F0E629293AA9001580D2 /* GetClassName.swift */,
+				85FE40C5292E70E5007E5723 /* ClassName.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
 		};
-		85FE40C1292CAB57007E5723 /* TokyoTableView */ = {
+		85FE40C1292CAB57007E5723 /* TokyoCollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				853F93022927FE6000E8D10B /* TokyoImageModel.swift */,
 				85C0F0DC29293101001580D2 /* TokyoTableViewCell.swift */,
 				85FE40C2292CAB7B007E5723 /* TokyoCollectionViewCell.swift */,
 			);
-			path = TokyoTableView;
+			path = TokyoCollectionView;
+			sourceTree = "<group>";
+		};
+		85FE40C7292EA3E0007E5723 /* IconCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				85FE40DE2930795B007E5723 /* IconModel.swift */,
+				85C0F0DE29293125001580D2 /* IconTableViewCell.swift */,
+				85FE40E0293079A0007E5723 /* IconCollectionViewcell.swift */,
+			);
+			path = IconCollectionView;
+			sourceTree = "<group>";
+		};
+		85FE40C8292EA3F4007E5723 /* PopularCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				85FE40CC292EA948007E5723 /* PopularImageModel.swift */,
+				85C0F0E029293136001580D2 /* PopularTableViewCell.swift */,
+				85FE40CE292EABC7007E5723 /* PopularCollectionViewCell.swift */,
+			);
+			path = PopularCollectionView;
+			sourceTree = "<group>";
+		};
+		85FE40C9292EA52A007E5723 /* RecentCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				85FE40D4293046F9007E5723 /* RecentImageModel.swift */,
+				85C0F0E2292931A4001580D2 /* RecentTableViewCell.swift */,
+				85FE40D2292F754C007E5723 /* RecentCollectionViewCell.swift */,
+			);
+			path = RecentCollectionView;
+			sourceTree = "<group>";
+		};
+		85FE40CB292EA547007E5723 /* MagazineCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				85FE40D929307499007E5723 /* MagazineImageModel.swift */,
+				85C0F0E4292931BB001580D2 /* MagazineTableViewCell.swift */,
+				85FE40DC293074BF007E5723 /* MagazineCollectionViewCell.swift */,
+			);
+			path = MagazineCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,20 +432,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				85C0F0DD29293101001580D2 /* TokyoTableViewCell.swift in Sources */,
+				85FE40CD292EA948007E5723 /* PopularImageModel.swift in Sources */,
+				85FE40DD293074BF007E5723 /* MagazineCollectionViewCell.swift in Sources */,
 				9898318E29308E3C00F24C83 /* PlanHeaderView.swift in Sources */,
 				9898318A29308D9300F24C83 /* PlanTableViewCell.swift in Sources */,
 				4A585D1529254C0E0090013A /* MyTravelViewController.swift in Sources */,
+				85FE40D3292F754C007E5723 /* RecentCollectionViewCell.swift in Sources */,
 				4AD2C8DC2925603500EB4A76 /* Image.swift in Sources */,
 				4A585CE02925399E0090013A /* AppDelegate.swift in Sources */,
 				987F68F229285A3600E48C18 /* CityCollectionViewCell.swift in Sources */,
 				4A585CE22925399E0090013A /* SceneDelegate.swift in Sources */,
 				85C0F0E3292931A4001580D2 /* RecentTableViewCell.swift in Sources */,
+				85FE40CF292EABC7007E5723 /* PopularCollectionViewCell.swift in Sources */,
 				85FE40C0292B7405007E5723 /* MyProfileViewController.swift in Sources */,
+				85FE40D5293046F9007E5723 /* RecentImageModel.swift in Sources */,
+				85FE40DF2930795B007E5723 /* IconModel.swift in Sources */,
 				4AD2C8E22925606E00EB4A76 /* DataModel.swift in Sources */,
 				987F68F02928528100E48C18 /* CityGridViewController.swift in Sources */,
 				987F68EC2928519B00E48C18 /* CityModel.swift in Sources */,
 				85C0F0E729293AA9001580D2 /* GetClassName.swift in Sources */,
 				85C0F0DF29293125001580D2 /* IconTableViewCell.swift in Sources */,
+				85FE40C6292E70E5007E5723 /* ClassName.swift in Sources */,
 				4AD2C8DE2925606400EB4A76 /* Base.swift in Sources */,
 				4A585D0C29254B4F0090013A /* TabBarController.swift in Sources */,
 				85C0F0E129293136001580D2 /* PopularTableViewCell.swift in Sources */,
@@ -408,6 +463,8 @@
 				4A585D042925466F0090013A /* Constant.swift in Sources */,
 				4A585D1029254BC00090013A /* WishViewController.swift in Sources */,
 				85FE40C3292CAB7B007E5723 /* TokyoCollectionViewCell.swift in Sources */,
+				85FE40E1293079A0007E5723 /* IconCollectionViewcell.swift in Sources */,
+				85FE40DA29307499007E5723 /* MagazineImageModel.swift in Sources */,
 				4A585D0E29254B970090013A /* HomeViewController.swift in Sources */,
 				9898319029308E6400F24C83 /* PlanViewController.swift in Sources */,
 				85C0F0E5292931BB001580D2 /* MagazineTableViewCell.swift in Sources */,
