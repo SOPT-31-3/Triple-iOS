@@ -71,27 +71,23 @@ extension PlanTableViewCell {
         }
         
         cellView.snp.makeConstraints {
-            $0.top.equalToSuperview()
+            $0.top.trailing.bottom.equalToSuperview()
             $0.leading.equalToSuperview().offset(33)
-            $0.width.equalTo(152)
-            $0.height.equalTo(18)
         }
         
         timeTextField.snp.makeConstraints {
-            $0.top.equalToSuperview()
+            $0.top.bottom.equalToSuperview().inset(6)
             $0.leading.equalToSuperview()
         }
         
         circleImgView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(6)
+            $0.centerY.equalTo(timeTextField)
             $0.leading.equalTo(timeTextField.snp.trailing).offset(14)
-            $0.width.equalTo(6)
-            $0.height.equalTo(6)
         }
         
         contentTextField.snp.makeConstraints {
             $0.leading.equalTo(timeTextField.snp.trailing).offset(33)
-            $0.top.equalTo(timeTextField)
+            $0.top.bottom.equalTo(timeTextField)
         }
     }
     
