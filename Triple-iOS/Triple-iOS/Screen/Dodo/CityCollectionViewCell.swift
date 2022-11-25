@@ -15,7 +15,6 @@ class CityCollectionViewCell: UICollectionViewCell {
     private let cityImageView = UIImageView()
     private let nameLabel = UILabel().then{
         $0.textColor = .white
-        $0.font = UIFont(name: "NotoSansCJKKR-Bold", size: 16)
     }
     
     override init(frame: CGRect) {
