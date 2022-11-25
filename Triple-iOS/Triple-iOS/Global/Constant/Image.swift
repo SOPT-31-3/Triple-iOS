@@ -15,5 +15,9 @@ extension Constant {
         static let friend = UIImage(named: "friend")!
         
         static let menu = UIImage(named: "menu")!
+        
+        static let plus = UIImage(named: "btnPlus")!
+        
+        static let circle = UIImage(named: "circle")!
     }
 }

@@ -150,7 +150,8 @@ extension CityGridViewController: UICollectionViewDelegateFlowLayout, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.item == 1 {
-            let planVC = MakePlanViewController()
+//            let planVC = MakePlanViewController()
+            let planVC = PlanViewController()
             planVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
             self.present(planVC, animated: true)
         }
