@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     
     private let headerView: UIView = {
         let headerView = UIView()
-        headerView.backgroundColor = .green
+        headerView.backgroundColor = .clear
         return headerView
     }()
     
@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "TRIPLE"
-        label.font = .systemFont(ofSize: 17.57.adjusted)
+        label.font = .systemFont(ofSize: 17.57.adjusted, weight: .bold)
         return label
     }()
     
@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
     
     private lazy var baseTableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .systemYellow
+        tableView.backgroundColor = .clear
         tableView.separatorStyle = .singleLine
         tableView.separatorColor = .clear
         tableView.delegate = self
@@ -53,7 +53,7 @@ class HomeViewController: UIViewController {
         let label = UILabel()
         label.numberOfLines = 2
         label.text = "다시열린 해외여행,\n도쿄에서 워밍업!"
-        label.font = .systemFont(ofSize: 24.01.adjusted)
+        label.font = .systemFont(ofSize: 24.01.adjusted, weight: .bold)
         return label
     }()
 
@@ -72,7 +72,7 @@ extension HomeViewController {
     // MARK: - Layout Helpers
     
     private func layout() {
-        view.backgroundColor = .yellow
+        view.backgroundColor = .clear
         
         // MARK: - superView
         [headerView, tableHeaderView, baseTableView].forEach{
@@ -98,7 +98,7 @@ extension HomeViewController {
         baseTableView.snp.makeConstraints{
             $0.top.equalTo(headerView.snp.bottom)
             $0.leading.trailing.equalTo(self.view.safeAreaLayoutGuide)
-            $0.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-20.adjusted)
+            $0.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-18.adjusted)
         }
         
         titleLabel.snp.makeConstraints{
@@ -158,7 +158,20 @@ extension HomeViewController {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200.adjusted
+        switch indexPath.section{
+        case 0:
+            return 192
+        case 1:
+            return 192
+        case 2:
+            return 171
+        case 3:
+            return 280
+        case 4:
+            return 328
+        default:
+            return 0
+        }
     }
 }
 

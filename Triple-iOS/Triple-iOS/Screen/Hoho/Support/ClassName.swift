@@ -1,8 +1,8 @@
 //
-//  getClassName.swift
+//  ClassName.swift
 //  Triple-iOS
 //
-//  Created by saint on 2022/11/20.
+//  Created by saint on 2022/11/24.
 //
 
 import Foundation
@@ -20,7 +20,7 @@ extension NSObject {
   
     static var className: String {
         NSStringFromClass(self.classForCoder()).components(separatedBy: ".").last!
-        /Users/saint/Documents/iOS/Triple-iOS/Triple-iOS/Triple-iOS/Screen/TabBar/MyTravelViewController.swift  }
+    }
      var className: String {
         NSStringFromClass(self.classForCoder).components(separatedBy: ".").last!
     }
