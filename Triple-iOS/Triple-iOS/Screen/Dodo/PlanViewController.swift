@@ -46,7 +46,7 @@ class PlanViewController: UIViewController {
         button.setTitle("전체 저장", for: .normal)
         button.setTitleColor(UIColor.white , for: .normal)
         button.addTarget(self, action: #selector(touchupSaveButton), for: .touchUpInside)
-        button.backgroundColor = .lightGray
+        button.backgroundColor = .green
         return button
     }()
     
@@ -68,7 +68,6 @@ class PlanViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.completionButton(isOn: false)
         setLayout()
         register()
         config()
@@ -97,14 +96,11 @@ extension PlanViewController {
         closeButton.snp.makeConstraints {
             $0.top.equalTo(self.view).offset(53)
             $0.leading.equalTo(self.view.safeAreaLayoutGuide).offset(24)
-            $0.width.height.equalTo(24)
         }
         
         friendButton.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(10)
             $0.trailing.equalTo(self.view.safeAreaLayoutGuide).offset(-18)
-            $0.width.equalTo(72)
-            $0.height.equalTo(36)
         }
         
         headerLabel1.snp.makeConstraints {
@@ -152,7 +148,7 @@ extension PlanViewController {
     
     @objc
     private func touchupSaveButton(){
-        let nextVC = HomeViewController()
+        let nextVC = TabBarController()
         nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: true, completion: nil)
     }
@@ -211,18 +207,5 @@ extension PlanViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 45
         // 푸터섹션 높이
-    }
-}
-
-extension PlanViewController {
-    func completionButton(isOn: Bool){
-        switch isOn{
-        case true:
-            saveButton.isEnabled = true
-            saveButton.backgroundColor = .green
-        case false:
-            saveButton.isEnabled = false
-            saveButton.backgroundColor = .systemGray
-        }
     }
 }
