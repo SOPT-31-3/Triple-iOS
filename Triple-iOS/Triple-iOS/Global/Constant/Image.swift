@@ -10,6 +10,6 @@ import UIKit
 extension Constant {
     struct Image {
         // 상수화 해서 사용
-        static let icX = UIImage(named: "icX")
+        static let icX = UIImage(named: "icX")!
     }
 }
