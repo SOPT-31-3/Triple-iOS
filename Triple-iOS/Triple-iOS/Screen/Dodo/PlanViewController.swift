@@ -25,7 +25,7 @@ class PlanViewController: UIViewController {
         return button
     }()
     
-    lazy var friendButton:UIButton = {
+    let friendButton:UIButton = {
         let button = UIButton()
         return button
     }()
@@ -41,7 +41,7 @@ class PlanViewController: UIViewController {
     
     let menuImgView = UIImageView()
     
-    let saveButton:UIButton = {
+    lazy var saveButton:UIButton = {
         let button = UIButton()
         button.setTitle("전체 저장", for: .normal)
         button.setTitleColor(UIColor.white , for: .normal)
@@ -117,9 +117,7 @@ extension PlanViewController {
         }
         
         saveButton.snp.makeConstraints {
-            $0.bottom.equalTo(self.view.snp.bottom)
-            $0.leading.trailing.equalTo(self.view.safeAreaLayoutGuide)
-            $0.width.equalTo(375)
+            $0.leading.trailing.bottom.equalToSuperview()
             $0.height.equalTo(63)
         }
         
