@@ -73,6 +73,7 @@ class PlanViewController: UIViewController {
         config()
         configButton()
         configImageView()
+        navibarHideen()
     }
 }
 
@@ -139,17 +140,20 @@ extension PlanViewController {
         listTableView.register(PlanTableViewCell.self, forCellReuseIdentifier: PlanTableViewCell.identifier)
     }
     
+    private func navibarHideen() {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     @objc
     private func touchupCloseButton(){
-        let previousVC = CityGridViewController()
-        previousVC.modalPresentationStyle = .fullScreen
-        self.present(previousVC, animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc
     private func touchupSaveButton(){
         let nextVC = TabBarController()
         nextVC.modalPresentationStyle = .fullScreen
+        nextVC.modalTransitionStyle = .crossDissolve
         self.present(nextVC, animated: true, completion: nil)
     }
     
