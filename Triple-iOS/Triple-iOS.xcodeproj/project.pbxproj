@@ -21,9 +21,10 @@
 		4AD2C8D729255F5A00EB4A76 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 4AD2C8D629255F5A00EB4A76 /* Then */; };
 		4AD2C8DA2925601200EB4A76 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4AD2C8D92925601200EB4A76 /* Moya */; };
 		4AD2C8DC2925603500EB4A76 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2C8DB2925603500EB4A76 /* Image.swift */; };
-		4AD2C8DE2925606400EB4A76 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2C8DD2925606400EB4A76 /* Base.swift */; };
-		4AD2C8E02925606A00EB4A76 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2C8DF2925606A00EB4A76 /* APIService.swift */; };
-		4AD2C8E22925606E00EB4A76 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2C8E12925606E00EB4A76 /* DataModel.swift */; };
+		4AD2C8E02925606A00EB4A76 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2C8DF2925606A00EB4A76 /* Router.swift */; };
+		4AEBEA182938710300BCA2B4 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBEA172938710300BCA2B4 /* Environment.swift */; };
+		4AEBEA1A2938713700BCA2B4 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBEA192938713700BCA2B4 /* NetworkLoggerPlugin.swift */; };
+		4AEBEA1C2938715000BCA2B4 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBEA1B2938715000BCA2B4 /* Encodable.swift */; };
 		853F92FF292632F400E8D10B /* Adjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853F92FE292632F400E8D10B /* Adjusted.swift */; };
 		853F93032927FE6000E8D10B /* TokyoImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853F93022927FE6000E8D10B /* TokyoImageModel.swift */; };
 		85C0F0DD29293101001580D2 /* TokyoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0DC29293101001580D2 /* TokyoTableViewCell.swift */; };
@@ -66,9 +67,10 @@
 		4A585D0F29254BC00090013A /* WishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishViewController.swift; sourceTree = "<group>"; };
 		4A585D1429254C0E0090013A /* MyTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTravelViewController.swift; sourceTree = "<group>"; };
 		4AD2C8DB2925603500EB4A76 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		4AD2C8DD2925606400EB4A76 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
-		4AD2C8DF2925606A00EB4A76 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		4AD2C8E12925606E00EB4A76 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		4AD2C8DF2925606A00EB4A76 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		4AEBEA172938710300BCA2B4 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		4AEBEA192938713700BCA2B4 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		4AEBEA1B2938715000BCA2B4 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		853F92FE292632F400E8D10B /* Adjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjusted.swift; sourceTree = "<group>"; };
 		853F93022927FE6000E8D10B /* TokyoImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokyoImageModel.swift; sourceTree = "<group>"; };
 		85C0F0DC29293101001580D2 /* TokyoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokyoTableViewCell.swift; sourceTree = "<group>"; };
@@ -162,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				4A585D002925457A0090013A /* Base */,
-				4A585CFF292545750090013A /* APIService */,
+				4A585CFF292545750090013A /* Router */,
 				4A585CFE2925456F0090013A /* DataModel */,
 			);
 			path = Network;
@@ -230,24 +232,25 @@
 		4A585CFE2925456F0090013A /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				4AD2C8E12925606E00EB4A76 /* DataModel.swift */,
 				987F68EB2928519B00E48C18 /* CityModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
 		};
-		4A585CFF292545750090013A /* APIService */ = {
+		4A585CFF292545750090013A /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				4AD2C8DF2925606A00EB4A76 /* APIService.swift */,
+				4AD2C8DF2925606A00EB4A76 /* Router.swift */,
 			);
-			path = APIService;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		4A585D002925457A0090013A /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				4AD2C8DD2925606400EB4A76 /* Base.swift */,
+				4AEBEA172938710300BCA2B4 /* Environment.swift */,
+				4AEBEA192938713700BCA2B4 /* NetworkLoggerPlugin.swift */,
+				4AEBEA1B2938715000BCA2B4 /* Encodable.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -437,9 +440,12 @@
 				9898318E29308E3C00F24C83 /* PlanHeaderView.swift in Sources */,
 				9898318A29308D9300F24C83 /* PlanTableViewCell.swift in Sources */,
 				4A585D1529254C0E0090013A /* MyTravelViewController.swift in Sources */,
+				4AEBEA1A2938713700BCA2B4 /* NetworkLoggerPlugin.swift in Sources */,
+				4AEBEA1C2938715000BCA2B4 /* Encodable.swift in Sources */,
 				85FE40D3292F754C007E5723 /* RecentCollectionViewCell.swift in Sources */,
 				4AD2C8DC2925603500EB4A76 /* Image.swift in Sources */,
 				4A585CE02925399E0090013A /* AppDelegate.swift in Sources */,
+				4AEBEA182938710300BCA2B4 /* Environment.swift in Sources */,
 				987F68F229285A3600E48C18 /* CityCollectionViewCell.swift in Sources */,
 				4A585CE22925399E0090013A /* SceneDelegate.swift in Sources */,
 				85C0F0E3292931A4001580D2 /* RecentTableViewCell.swift in Sources */,
@@ -447,18 +453,15 @@
 				85FE40C0292B7405007E5723 /* MyProfileViewController.swift in Sources */,
 				85FE40D5293046F9007E5723 /* RecentImageModel.swift in Sources */,
 				85FE40DF2930795B007E5723 /* IconModel.swift in Sources */,
-				4AD2C8E22925606E00EB4A76 /* DataModel.swift in Sources */,
 				987F68F02928528100E48C18 /* CityGridViewController.swift in Sources */,
 				987F68EC2928519B00E48C18 /* CityModel.swift in Sources */,
-				85C0F0E729293AA9001580D2 /* GetClassName.swift in Sources */,
 				85C0F0DF29293125001580D2 /* IconTableViewCell.swift in Sources */,
 				85FE40C6292E70E5007E5723 /* ClassName.swift in Sources */,
-				4AD2C8DE2925606400EB4A76 /* Base.swift in Sources */,
 				4A585D0C29254B4F0090013A /* TabBarController.swift in Sources */,
 				85C0F0E129293136001580D2 /* PopularTableViewCell.swift in Sources */,
 				9898318C29308DD100F24C83 /* SampleModel.swift in Sources */,
 				853F93032927FE6000E8D10B /* TokyoImageModel.swift in Sources */,
-				4AD2C8E02925606A00EB4A76 /* APIService.swift in Sources */,
+				4AD2C8E02925606A00EB4A76 /* Router.swift in Sources */,
 				853F92FF292632F400E8D10B /* Adjusted.swift in Sources */,
 				4A585D042925466F0090013A /* Constant.swift in Sources */,
 				4A585D1029254BC00090013A /* WishViewController.swift in Sources */,
