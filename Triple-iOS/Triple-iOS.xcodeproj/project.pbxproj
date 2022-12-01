@@ -27,6 +27,9 @@
 		4AEBEA1C2938715000BCA2B4 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEBEA1B2938715000BCA2B4 /* Encodable.swift */; };
 		853F92FF292632F400E8D10B /* Adjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853F92FE292632F400E8D10B /* Adjusted.swift */; };
 		853F93032927FE6000E8D10B /* TokyoImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853F93022927FE6000E8D10B /* TokyoImageModel.swift */; };
+		85A88AE7293888770009D6F8 /* TravelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A88AE6293888770009D6F8 /* TravelHeaderView.swift */; };
+		85A88AE92938894F0009D6F8 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A88AE82938894F0009D6F8 /* TravelTableViewCell.swift */; };
+		85A88AEB2938ACA00009D6F8 /* MyTravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A88AEA2938ACA00009D6F8 /* MyTravelModel.swift */; };
 		85C0F0DD29293101001580D2 /* TokyoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0DC29293101001580D2 /* TokyoTableViewCell.swift */; };
 		85C0F0DF29293125001580D2 /* IconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0DE29293125001580D2 /* IconTableViewCell.swift */; };
 		85C0F0E129293136001580D2 /* PopularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C0F0E029293136001580D2 /* PopularTableViewCell.swift */; };
@@ -73,6 +76,9 @@
 		4AEBEA1B2938715000BCA2B4 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		853F92FE292632F400E8D10B /* Adjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjusted.swift; sourceTree = "<group>"; };
 		853F93022927FE6000E8D10B /* TokyoImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokyoImageModel.swift; sourceTree = "<group>"; };
+		85A88AE6293888770009D6F8 /* TravelHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelHeaderView.swift; sourceTree = "<group>"; };
+		85A88AE82938894F0009D6F8 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
+		85A88AEA2938ACA00009D6F8 /* MyTravelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTravelModel.swift; sourceTree = "<group>"; };
 		85C0F0DC29293101001580D2 /* TokyoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokyoTableViewCell.swift; sourceTree = "<group>"; };
 		85C0F0DE29293125001580D2 /* IconTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTableViewCell.swift; sourceTree = "<group>"; };
 		85C0F0E029293136001580D2 /* PopularTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTableViewCell.swift; sourceTree = "<group>"; };
@@ -222,6 +228,7 @@
 		4A585CFD292545590090013A /* Hoho */ = {
 			isa = PBXGroup;
 			children = (
+				85A88AE3293885870009D6F8 /* TravelView */,
 				4A585D0D29254B970090013A /* HomeViewController.swift */,
 				85C0F0DB292930C1001580D2 /* TableViewCells */,
 				85C0F0E82929412B001580D2 /* Support */,
@@ -277,10 +284,20 @@
 			children = (
 				4A585D0B29254B4F0090013A /* TabBarController.swift */,
 				4A585D0F29254BC00090013A /* WishViewController.swift */,
-				4A585D1429254C0E0090013A /* MyTravelViewController.swift */,
 				85FE40BF292B7405007E5723 /* MyProfileViewController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		85A88AE3293885870009D6F8 /* TravelView */ = {
+			isa = PBXGroup;
+			children = (
+				4A585D1429254C0E0090013A /* MyTravelViewController.swift */,
+				85A88AE6293888770009D6F8 /* TravelHeaderView.swift */,
+				85A88AE82938894F0009D6F8 /* TravelTableViewCell.swift */,
+				85A88AEA2938ACA00009D6F8 /* MyTravelModel.swift */,
+			);
+			path = TravelView;
 			sourceTree = "<group>";
 		};
 		85C0F0DB292930C1001580D2 /* TableViewCells */ = {
@@ -437,6 +454,7 @@
 				85C0F0DD29293101001580D2 /* TokyoTableViewCell.swift in Sources */,
 				85FE40CD292EA948007E5723 /* PopularImageModel.swift in Sources */,
 				85FE40DD293074BF007E5723 /* MagazineCollectionViewCell.swift in Sources */,
+				85A88AE7293888770009D6F8 /* TravelHeaderView.swift in Sources */,
 				9898318E29308E3C00F24C83 /* PlanHeaderView.swift in Sources */,
 				9898318A29308D9300F24C83 /* PlanTableViewCell.swift in Sources */,
 				4A585D1529254C0E0090013A /* MyTravelViewController.swift in Sources */,
@@ -448,7 +466,9 @@
 				4AEBEA182938710300BCA2B4 /* Environment.swift in Sources */,
 				987F68F229285A3600E48C18 /* CityCollectionViewCell.swift in Sources */,
 				4A585CE22925399E0090013A /* SceneDelegate.swift in Sources */,
+				85A88AE92938894F0009D6F8 /* TravelTableViewCell.swift in Sources */,
 				85C0F0E3292931A4001580D2 /* RecentTableViewCell.swift in Sources */,
+				85A88AEB2938ACA00009D6F8 /* MyTravelModel.swift in Sources */,
 				85FE40CF292EABC7007E5723 /* PopularCollectionViewCell.swift in Sources */,
 				85FE40C0292B7405007E5723 /* MyProfileViewController.swift in Sources */,
 				85FE40D5293046F9007E5723 /* RecentImageModel.swift in Sources */,
