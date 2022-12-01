@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import Moya
 
 // MARK: - PlanViewController
 class PlanViewController: UIViewController {
@@ -64,6 +65,10 @@ class PlanViewController: UIViewController {
         
         return tableView
     }()
+    
+    let userProvider = MoyaProvider<Router>(
+        plugins: [NetworkLoggerPlugin(verbose: true)]
+    )
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -155,6 +160,8 @@ extension PlanViewController {
         nextVC.modalPresentationStyle = .fullScreen
         nextVC.modalTransitionStyle = .crossDissolve
         self.present(nextVC, animated: true, completion: nil)
+        
+        
     }
     
     private func configButton(){

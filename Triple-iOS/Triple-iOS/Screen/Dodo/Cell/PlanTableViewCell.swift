@@ -32,7 +32,6 @@ class PlanTableViewCell: UITableViewCell, UITextFieldDelegate {
         return textField
     }()
     
-    
     private let circleImgView = UIImageView()
     
     private let contentTextField: UITextField = {
@@ -89,6 +88,14 @@ extension PlanTableViewCell {
             $0.leading.equalTo(timeTextField.snp.trailing).offset(33)
             $0.top.bottom.equalTo(timeTextField)
         }
+    }
+    
+    func popInput() -> String? {
+        return timeTextField.text
+    }
+    
+    func popInput2() -> String? {
+        return contentTextField.text
     }
     
     private func configImageView(){
