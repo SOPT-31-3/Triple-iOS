@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Welcome
 struct SaveRequestDto: Codable {
-    let planList: [PlanList]
+    let planList: [PlanList]?
 }
 
 // MARK: - PlanList

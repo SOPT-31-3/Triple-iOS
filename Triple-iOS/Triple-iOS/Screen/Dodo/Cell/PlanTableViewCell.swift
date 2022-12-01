@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import Moya
 
 // MARK: - ListTableViewCell
 class PlanTableViewCell: UITableViewCell, UITextFieldDelegate {
@@ -24,7 +25,7 @@ class PlanTableViewCell: UITableViewCell, UITextFieldDelegate {
         return view
     }()
     
-    let timeTextField: UITextField = {
+    public let timeTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
         textField.placeholder = "00:00"
@@ -41,6 +42,24 @@ class PlanTableViewCell: UITableViewCell, UITextFieldDelegate {
         textField.font = UIFont(name: "", size: 12)
         return textField
     }()
+    
+    var array: [PlanList] = []
+    
+    func checkInput() {
+        if let time = popInput(),
+           let content = popInput2() {
+            
+            array.append(PlanList(dayID: 1, time: time, content: content))
+//            let param = SaveRequestDto(planList: [PlanList(dayID: 1, time: time, content: content)])
+            print("테스트: \(array)")
+            print(content)
+            save(param: array)
+        }
+    }
+    
+    let userProvider = MoyaProvider<Router>(
+        plugins: [NetworkLoggerPlugin(verbose: true)]
+    )
     
     // MARK: - View Life Cycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -97,6 +116,24 @@ extension PlanTableViewCell {
     func popInput2() -> String? {
         return contentTextField.text
     }
+    
+    private func save(param: [PlanList]) {
+        userProvider.request(.save(param: array)) { response in
+            switch response {
+            case .success(let result):
+                print("성공")
+                let status = result.statusCode
+                if status >= 200 && status < 300 {
+                    let call = PlanViewController()
+                    call.presentToHome()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+                print("실패")
+            }
+        }
+    }
+    
     
     private func configImageView(){
         circleImgView.image = UIImage(named: "circle")

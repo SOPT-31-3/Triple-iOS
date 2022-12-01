@@ -66,9 +66,12 @@ class PlanViewController: UIViewController {
         return tableView
     }()
     
-    let userProvider = MoyaProvider<Router>(
-        plugins: [NetworkLoggerPlugin(verbose: true)]
-    )
+    func presentToHome() {
+        let nextVC = TabBarController()
+        nextVC.modalPresentationStyle = .fullScreen
+        nextVC.modalTransitionStyle = .crossDissolve
+        self.present(nextVC, animated: true, completion: nil)
+    }
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -156,13 +159,11 @@ extension PlanViewController {
     
     @objc
     private func touchupSaveButton(){
-        let nextVC = TabBarController()
-        nextVC.modalPresentationStyle = .fullScreen
-        nextVC.modalTransitionStyle = .crossDissolve
-        self.present(nextVC, animated: true, completion: nil)
-        
-        
+        let call = PlanTableViewCell()
+        call.checkInput()
     }
+    
+    
     
     private func configButton(){
         closeButton.setBackgroundImage(Constant.Image.icX, for: .normal)
