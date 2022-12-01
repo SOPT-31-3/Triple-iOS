@@ -155,9 +155,9 @@ class MyTravelViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        super.viewDidLoad()
         layout()
         register()
-        super.viewDidLoad()
     }
 }
 
@@ -166,12 +166,15 @@ extension MyTravelViewController{
     private func layout() {
         view.backgroundColor = .clear
         
-        [headerView, backButton, editButton,
+        [backButton, editButton].forEach{
+            headerView.addSubview($0)
+        }
+        
+        [headerView,listTableView,
          firstProfileImageView, firstCityLabel, firstTravelLabel,
          secondProfileImageView, secondCityLabel, secondTravelLabel,
          thirdProfileImageView, thirdCityLabel, thirdTravelLabel,
-         horizontalLineView1, horizontalLineView2, horizontalLineView3,
-         listTableView].forEach{
+         horizontalLineView1, horizontalLineView2, horizontalLineView3].forEach{
             view.addSubview($0)
         }
         
