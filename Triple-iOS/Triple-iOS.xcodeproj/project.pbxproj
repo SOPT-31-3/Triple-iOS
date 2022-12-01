@@ -222,6 +222,7 @@
 		4A585CFD292545590090013A /* Hoho */ = {
 			isa = PBXGroup;
 			children = (
+				85A88AE3293885870009D6F8 /* TravelView */,
 				4A585D0D29254B970090013A /* HomeViewController.swift */,
 				85C0F0DB292930C1001580D2 /* TableViewCells */,
 				85C0F0E82929412B001580D2 /* Support */,
@@ -277,10 +278,17 @@
 			children = (
 				4A585D0B29254B4F0090013A /* TabBarController.swift */,
 				4A585D0F29254BC00090013A /* WishViewController.swift */,
-				4A585D1429254C0E0090013A /* MyTravelViewController.swift */,
 				85FE40BF292B7405007E5723 /* MyProfileViewController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		85A88AE3293885870009D6F8 /* TravelView */ = {
+			isa = PBXGroup;
+			children = (
+				4A585D1429254C0E0090013A /* MyTravelViewController.swift */,
+			);
+			path = TravelView;
 			sourceTree = "<group>";
 		};
 		85C0F0DB292930C1001580D2 /* TableViewCells */ = {
