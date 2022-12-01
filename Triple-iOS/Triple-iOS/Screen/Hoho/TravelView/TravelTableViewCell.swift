@@ -23,7 +23,8 @@ class TravelTableViewCell: UITableViewCell, UITextFieldDelegate {
     let timeLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .white
-        label.font = UIFont(name: "", size: 12)
+        label.font = .systemFont(ofSize: 12, weight: .medium)
+        label.textColor = .systemGray2
         return label
     }()
     
@@ -33,7 +34,7 @@ class TravelTableViewCell: UITableViewCell, UITextFieldDelegate {
     let contentLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .white
-        label.font = UIFont(name: "", size: 12)
+        label.font = .systemFont(ofSize: 12, weight: .medium)
         return label
     }()
     
@@ -65,20 +66,21 @@ extension TravelTableViewCell {
         cellView.snp.makeConstraints {
             $0.top.trailing.bottom.equalToSuperview()
             $0.leading.equalToSuperview().offset(33)
+            $0.height.equalTo(25.adjusted)
         }
         
         timeLabel.snp.makeConstraints {
             $0.top.bottom.equalToSuperview().inset(6)
-            $0.leading.equalToSuperview()
+            $0.trailing.equalTo(circleImgView.snp.leading).offset(-14)
         }
         
         circleImgView.snp.makeConstraints {
             $0.centerY.equalTo(timeLabel)
-            $0.leading.equalTo(timeLabel.snp.trailing).offset(14)
+            $0.leading.equalToSuperview().offset(50)
         }
         
         contentLabel.snp.makeConstraints {
-            $0.leading.equalTo(timeLabel.snp.trailing).offset(33)
+            $0.leading.equalTo(circleImgView.snp.trailing).offset(13)
             $0.top.bottom.equalTo(timeLabel)
         }
     }
@@ -91,6 +93,11 @@ extension TravelTableViewCell {
         backgroundColor = .clear
         contentView.backgroundColor = .clear
         selectionStyle = .none
+    }
+    
+    func dataBind(model: MyTravelModel) {
+        timeLabel.text = model.time
+        contentLabel.text = model.content
     }
 }
 

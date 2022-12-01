@@ -102,7 +102,7 @@ class MyTravelViewController: UIViewController {
         return label
     }()
     
-    // MARK: - ㅇ
+    // MARK: - horizontalLine
     private let horizontalLineView1: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.lightGray
@@ -121,15 +121,42 @@ class MyTravelViewController: UIViewController {
         return view
     }()
     
-    private let horizontalLineView4: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.lightGray
-        return view
+    // MARK: - Variables
+    
+    var travelList1: [MyTravelModel] = [
+        MyTravelModel(time: "11:00", content: "샤르드골 공항 도착/OZ088"),
+        MyTravelModel(time: "15:00", content: "호텔 체크인"),
+        MyTravelModel(time: "19:00", content: "니커버커 식당 예약"),
+        MyTravelModel(time: "19:00", content: "몽생미셸 투어 시작"),
+    ]
+    
+    var travelList2: [MyTravelModel] = [
+        MyTravelModel(time: "11:00", content: "호텔 체크아웃"),
+        MyTravelModel(time: "15:00", content: "휴식"),
+    ]
+    
+    var travelList3: [MyTravelModel] = [
+        MyTravelModel(time: "11:00", content: "타워브릿지 투어시작"),
+        MyTravelModel(time: "15:00", content: "휴식"),
+    ]
+    
+    private lazy var listTableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        
+        tableView.backgroundColor = .white
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        return tableView
     }()
-
+    
     override func viewDidLoad() {
         
         layout()
+        register()
         super.viewDidLoad()
     }
 }
@@ -143,7 +170,8 @@ extension MyTravelViewController{
          firstProfileImageView, firstCityLabel, firstTravelLabel,
          secondProfileImageView, secondCityLabel, secondTravelLabel,
          thirdProfileImageView, thirdCityLabel, thirdTravelLabel,
-         horizontalLineView1, horizontalLineView2, horizontalLineView3].forEach{
+         horizontalLineView1, horizontalLineView2, horizontalLineView3,
+         listTableView].forEach{
             view.addSubview($0)
         }
         
@@ -232,6 +260,86 @@ extension MyTravelViewController{
             $0.height.equalTo(1.5)
             $0.centerX.equalToSuperview()
         }
+        
+        listTableView.snp.makeConstraints {
+            $0.top.equalTo(firstTravelLabel.snp.bottom).offset(26)
+            $0.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            $0.bottom.equalTo(horizontalLineView1.snp.top)
+        }
+    }
+    private func register() {
+        
+        listTableView.register(TravelTableViewCell.self,
+                               forCellReuseIdentifier: TravelTableViewCell.className
+        )
     }
 }
 
+// MARK: - UITableViewDataSource
+extension MyTravelViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+        // 전체 섹션이 몇개인지
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section{
+        case 0:
+            return 4
+        case 1:
+            return 2
+        case 2:
+            return 2
+        default:
+            return 0
+        }
+        // 한 섹션당 셀이 몇개인지
+    }
+    
+    // 각각의 table cell에 dataBind 해주기
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TravelTableViewCell.className, for: indexPath) as? TravelTableViewCell else {return UITableViewCell()}
+        switch indexPath.section{
+        case 0:
+            cell.dataBind(model: travelList1[indexPath.item])
+            return cell
+        case 1:
+            cell.dataBind(model: travelList2[indexPath.item])
+            return cell
+        case 2:
+            cell.dataBind(model: travelList2[indexPath.item])
+            return cell
+        default:
+            return cell
+        }
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension MyTravelViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = PlanHeaderView()
+        view.setDay(day: sampleDay[section])
+        view.setDate(date: sampleDate[section])
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+        // 헤더섹션 높이
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 16
+        // 푸터섹션 높이
+    }
+}
