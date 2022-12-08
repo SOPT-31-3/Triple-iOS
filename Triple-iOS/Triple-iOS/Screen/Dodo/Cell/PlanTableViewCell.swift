@@ -46,24 +46,6 @@ class PlanTableViewCell: UITableViewCell, UITextFieldDelegate {
     var delegate: PlanListDelegate?
     var index: IndexPath?
     
-//    var array: [PlanList] = []
-    
-//    func checkInput() {
-//        if let time = popInput(),
-//           let content = popInput2() {
-//
-//            array.append(PlanList(dayID: 1, time: time, content: content))
-////            let param = SaveRequestDto(planList: [PlanList(dayID: 1, time: time, content: content)])
-//            print("테스트: \(array)")
-//            print(content)
-//            save(param: array)
-//        }
-//    }
-    
-    let userProvider = MoyaProvider<Router>(
-        plugins: [NetworkLoggerPlugin(verbose: true)]
-    )
-    
     // MARK: - View Life Cycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -109,31 +91,6 @@ extension PlanTableViewCell {
         contentTextField.snp.makeConstraints {
             $0.leading.equalTo(timeTextField.snp.trailing).offset(33)
             $0.top.bottom.equalTo(timeTextField)
-        }
-    }
-    
-    func popInput() -> String? {
-        return timeTextField.text
-    }
-    
-    func popInput2() -> String? {
-        return contentTextField.text
-    }
-    
-    private func save(param: [PlanList]) {
-        userProvider.request(.save(param: array)) { response in
-            switch response {
-            case .success(let result):
-                print("성공")
-                let status = result.statusCode
-                if status >= 200 && status < 300 {
-                    let call = PlanViewController()
-                    call.presentToHome()
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
-                print("실패")
-            }
         }
     }
     
