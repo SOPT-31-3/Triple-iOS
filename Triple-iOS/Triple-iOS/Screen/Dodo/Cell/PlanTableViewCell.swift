@@ -43,19 +43,22 @@ class PlanTableViewCell: UITableViewCell, UITextFieldDelegate {
         return textField
     }()
     
-    var array: [PlanList] = []
+    var delegate: PlanListDelegate?
+    var index: IndexPath?
     
-    func checkInput() {
-        if let time = popInput(),
-           let content = popInput2() {
-            
-            array.append(PlanList(dayID: 1, time: time, content: content))
-//            let param = SaveRequestDto(planList: [PlanList(dayID: 1, time: time, content: content)])
-            print("테스트: \(array)")
-            print(content)
-            save(param: array)
-        }
-    }
+//    var array: [PlanList] = []
+    
+//    func checkInput() {
+//        if let time = popInput(),
+//           let content = popInput2() {
+//
+//            array.append(PlanList(dayID: 1, time: time, content: content))
+////            let param = SaveRequestDto(planList: [PlanList(dayID: 1, time: time, content: content)])
+//            print("테스트: \(array)")
+//            print(content)
+//            save(param: array)
+//        }
+//    }
     
     let userProvider = MoyaProvider<Router>(
         plugins: [NetworkLoggerPlugin(verbose: true)]
@@ -134,6 +137,13 @@ extension PlanTableViewCell {
         }
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let index = self.index else { return }
+        guard let time = self.timeTextField.text else { return }
+        guard let content = self.contentTextField.text else { return }
+        let list = PlanList(dayID: index.section + 1, time: time, content: content)
+        delegate?.addPlanList(plan: list, index: index.section * 3 + index.row)
+    }
     
     private func configImageView(){
         circleImgView.image = UIImage(named: "circle")

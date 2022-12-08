@@ -11,8 +11,13 @@ import SnapKit
 import Then
 import Moya
 
+protocol PlanListDelegate {
+    func addPlanList(plan: PlanList, index: Int)
+}
+
 // MARK: - PlanViewController
 class PlanViewController: UIViewController {
+    
     
     let headerView:UIView = {
         let view = UIView()
@@ -138,7 +143,10 @@ extension PlanViewController {
     
     // MARK: - General Helper
     
-    
+    func addPlanList(plan: PlanList, index: IndexPath) {
+        let completeList = plan
+        let completeIndex = index
+    }
     
     private func config() {
         view.backgroundColor = .white
@@ -159,8 +167,7 @@ extension PlanViewController {
     
     @objc
     private func touchupSaveButton(){
-        let call = PlanTableViewCell()
-        call.checkInput()
+        
     }
     
     
@@ -189,6 +196,7 @@ extension PlanViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PlanTableViewCell.identifier, for: indexPath) as? PlanTableViewCell else {return UITableViewCell()}
+        cell.index = indexPath
         return cell
     }
 }
