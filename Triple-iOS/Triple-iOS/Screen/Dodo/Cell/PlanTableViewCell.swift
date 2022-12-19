@@ -99,8 +99,7 @@ extension PlanTableViewCell {
         guard let time = self.timeTextField.text else { return }
         guard let content = self.contentTextField.text else { return }
         let list = PlanList(dayID: index.section + 1, time: time, content: content)
-        print(list)
-        delegate?.addPlanList(plan: list, index: index.section * 3 + index.row)
+        delegate?.addPlanList(plan: list)
     }
 
     

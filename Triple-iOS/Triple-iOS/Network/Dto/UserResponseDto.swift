@@ -11,7 +11,7 @@ import Foundation
 struct SaveResponsetDto: Codable {
     let status: Int
     let message: String
-    let data: DataClass
+    let data: DataClass?
 }
 
 // MARK: - DataClass

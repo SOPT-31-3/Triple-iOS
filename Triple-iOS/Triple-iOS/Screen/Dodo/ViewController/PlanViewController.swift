@@ -18,7 +18,7 @@ import Moya
 // indexPath?
 
 protocol PlanListDelegate {
-    func addPlanList(plan: PlanList, index: Int)
+    func addPlanList(plan: PlanList)
 }
 
 // MARK: - PlanViewController
@@ -75,9 +75,9 @@ class PlanViewController: UIViewController {
         return tableView
     }()
     
-//    let userProvider = MoyaProvider<Router>(
-//            plugins: [NetworkLoggerPlugin(verbose: true)]
-//        }
+    let userProvider = MoyaProvider<Router>(
+            plugins: [NetworkLoggerPlugin(verbose: true)]
+            )
     
     func presentToHome() {
         let nextVC = TabBarController()
@@ -85,6 +85,9 @@ class PlanViewController: UIViewController {
         nextVC.modalTransitionStyle = .crossDissolve
         self.present(nextVC, animated: true, completion: nil)
     }
+    
+    var resultArray: [PlanList] = []
+    var responseData: SaveResponsetDto?
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -170,35 +173,34 @@ extension PlanViewController: PlanListDelegate {
     
     @objc
     private func touchupSaveButton(){
-        let planCell = PlanTableViewCell()
-        planCell.delegate = self
-        presentToHome()
+        save(param: resultArray)
     }
     
-    // 헤더라벨에 텍스트 바뀌게 했는ㄷㅔ 안바뀜..
-    func addPlanList(plan: PlanList, index: Int) {
-        print("테스트")
-        print(plan.content)
-        print(plan)
-        print(index)
+    func addPlanList(plan: PlanList) {
+        if (plan.content != ""){
+            resultArray.append(plan)
+        }
+        print(resultArray)
     }
     
-//    private func save(param: [PlanList]) {
-//            userProvider.request(.save(param: param)) { response in
-//                switch response {
-//                case .success(let result):
-//                    print("성공")
-//                    let status = result.statusCode
-//                    if status >= 200 && status < 300 {
-//                        let call = PlanViewController()
-//                        call.presentToHome()
-//                    }
-//                case .failure(let error):
-//                    print(error.localizedDescription)
-//                    print("실패")
-//                }
-//            }
-//        }
+    private func save(param: [PlanList]) {
+        userProvider.request(.save(param: param)) { response in
+            switch response {
+            case .success(let result):
+                do {
+                    self.responseData = try result.map(SaveResponsetDto.self)
+                    self.responseData?.data?.id
+                }
+                catch(let error) {
+                    print(error.localizedDescription)
+                }
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                print("실패")
+            }
+            }
+        }
     
     private func configButton(){
         closeButton.setBackgroundImage(Constant.Image.icX, for: .normal)
@@ -209,6 +211,7 @@ extension PlanViewController: PlanListDelegate {
         menuImgView.image = UIImage(named: "menu")
     }
 }
+
 
 // MARK: - UITableViewDataSource
 extension PlanViewController: UITableViewDataSource {
@@ -225,6 +228,7 @@ extension PlanViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PlanTableViewCell.identifier, for: indexPath) as? PlanTableViewCell else {return UITableViewCell()}
         cell.index = indexPath
+        cell.delegate = self
         return cell
     }
 }
