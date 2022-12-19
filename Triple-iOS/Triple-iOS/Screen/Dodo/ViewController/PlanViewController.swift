@@ -9,10 +9,20 @@ import UIKit
 
 import SnapKit
 import Then
+import Moya
+
+//func addPlanList(plan: PlanList, index: IndexPath) {
+//    let pleaseList = plan
+//    let pleaseIndex = index
+//}
+// indexPath?
+
+protocol PlanListDelegate {
+    func addPlanList(plan: PlanList, index: Int)
+}
 
 // MARK: - PlanViewController
 class PlanViewController: UIViewController {
-    
     let headerView:UIView = {
         let view = UIView()
         view.backgroundColor = .green
@@ -65,6 +75,17 @@ class PlanViewController: UIViewController {
         return tableView
     }()
     
+//    let userProvider = MoyaProvider<Router>(
+//            plugins: [NetworkLoggerPlugin(verbose: true)]
+//        }
+    
+    func presentToHome() {
+        let nextVC = TabBarController()
+        nextVC.modalPresentationStyle = .fullScreen
+        nextVC.modalTransitionStyle = .crossDissolve
+        self.present(nextVC, animated: true, completion: nil)
+    }
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +99,7 @@ class PlanViewController: UIViewController {
 }
 
 // MARK: - Extension
-extension PlanViewController {
+extension PlanViewController: PlanListDelegate {
     
     // MARK: - Layout Helper
     
@@ -129,7 +150,6 @@ extension PlanViewController {
     }
     
     // MARK: - General Helper
-    
     private func config() {
         view.backgroundColor = .white
     }
@@ -147,13 +167,38 @@ extension PlanViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
     @objc
     private func touchupSaveButton(){
-        let nextVC = TabBarController()
-        nextVC.modalPresentationStyle = .fullScreen
-        nextVC.modalTransitionStyle = .crossDissolve
-        self.present(nextVC, animated: true, completion: nil)
+        let planCell = PlanTableViewCell()
+        planCell.delegate = self
+        presentToHome()
     }
+    
+    // 헤더라벨에 텍스트 바뀌게 했는ㄷㅔ 안바뀜..
+    func addPlanList(plan: PlanList, index: Int) {
+        print("테스트")
+        print(plan.content)
+        print(plan)
+        print(index)
+    }
+    
+//    private func save(param: [PlanList]) {
+//            userProvider.request(.save(param: param)) { response in
+//                switch response {
+//                case .success(let result):
+//                    print("성공")
+//                    let status = result.statusCode
+//                    if status >= 200 && status < 300 {
+//                        let call = PlanViewController()
+//                        call.presentToHome()
+//                    }
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                    print("실패")
+//                }
+//            }
+//        }
     
     private func configButton(){
         closeButton.setBackgroundImage(Constant.Image.icX, for: .normal)
@@ -179,6 +224,7 @@ extension PlanViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PlanTableViewCell.identifier, for: indexPath) as? PlanTableViewCell else {return UITableViewCell()}
+        cell.index = indexPath
         return cell
     }
 }

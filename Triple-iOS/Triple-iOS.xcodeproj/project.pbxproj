@@ -46,6 +46,8 @@
 		85FE40DD293074BF007E5723 /* MagazineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40DC293074BF007E5723 /* MagazineCollectionViewCell.swift */; };
 		85FE40DF2930795B007E5723 /* IconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40DE2930795B007E5723 /* IconModel.swift */; };
 		85FE40E1293079A0007E5723 /* IconCollectionViewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FE40E0293079A0007E5723 /* IconCollectionViewcell.swift */; };
+		987E4C49293884B600060FD1 /* UserRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987E4C48293884B600060FD1 /* UserRequestDto.swift */; };
+		987E4C4B293888C900060FD1 /* UserResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987E4C4A293888C900060FD1 /* UserResponseDto.swift */; };
 		987F68EC2928519B00E48C18 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68EB2928519B00E48C18 /* CityModel.swift */; };
 		987F68F02928528100E48C18 /* CityGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68EF2928528100E48C18 /* CityGridViewController.swift */; };
 		987F68F229285A3600E48C18 /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987F68F129285A3600E48C18 /* CityCollectionViewCell.swift */; };
@@ -95,6 +97,8 @@
 		85FE40DC293074BF007E5723 /* MagazineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineCollectionViewCell.swift; sourceTree = "<group>"; };
 		85FE40DE2930795B007E5723 /* IconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModel.swift; sourceTree = "<group>"; };
 		85FE40E0293079A0007E5723 /* IconCollectionViewcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewcell.swift; sourceTree = "<group>"; };
+		987E4C48293884B600060FD1 /* UserRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestDto.swift; sourceTree = "<group>"; };
+		987E4C4A293888C900060FD1 /* UserResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseDto.swift; sourceTree = "<group>"; };
 		987F68EB2928519B00E48C18 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		987F68EF2928528100E48C18 /* CityGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGridViewController.swift; sourceTree = "<group>"; };
 		987F68F129285A3600E48C18 /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -171,7 +175,7 @@
 			children = (
 				4A585D002925457A0090013A /* Base */,
 				4A585CFF292545750090013A /* Router */,
-				4A585CFE2925456F0090013A /* DataModel */,
+				4A585CFE2925456F0090013A /* Dto */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -214,13 +218,10 @@
 		4A585CFC292544610090013A /* Dodo */ = {
 			isa = PBXGroup;
 			children = (
-				987F68EF2928528100E48C18 /* CityGridViewController.swift */,
-				987F68F129285A3600E48C18 /* CityCollectionViewCell.swift */,
-				9898318929308D9300F24C83 /* PlanTableViewCell.swift */,
-				9898318B29308DD100F24C83 /* SampleModel.swift */,
-				9898318D29308E3C00F24C83 /* PlanHeaderView.swift */,
-				9898318F29308E6400F24C83 /* PlanViewController.swift */,
-				989831912930AED800F24C83 /* PlanFooterView.swift */,
+				987E4C4F2938999100060FD1 /* View */,
+				987E4C4E2938997E00060FD1 /* Cell */,
+				987E4C4D2938997300060FD1 /* Model */,
+				987E4C4C2938995D00060FD1 /* ViewController */,
 			);
 			path = Dodo;
 			sourceTree = "<group>";
@@ -236,12 +237,14 @@
 			path = Hoho;
 			sourceTree = "<group>";
 		};
-		4A585CFE2925456F0090013A /* DataModel */ = {
+		4A585CFE2925456F0090013A /* Dto */ = {
 			isa = PBXGroup;
 			children = (
 				987F68EB2928519B00E48C18 /* CityModel.swift */,
+				987E4C48293884B600060FD1 /* UserRequestDto.swift */,
+				987E4C4A293888C900060FD1 /* UserResponseDto.swift */,
 			);
-			path = DataModel;
+			path = Dto;
 			sourceTree = "<group>";
 		};
 		4A585CFF292545750090013A /* Router */ = {
@@ -371,6 +374,41 @@
 			path = MagazineCollectionView;
 			sourceTree = "<group>";
 		};
+		987E4C4C2938995D00060FD1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				987F68EF2928528100E48C18 /* CityGridViewController.swift */,
+				9898318F29308E6400F24C83 /* PlanViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		987E4C4D2938997300060FD1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9898318B29308DD100F24C83 /* SampleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		987E4C4E2938997E00060FD1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9898318929308D9300F24C83 /* PlanTableViewCell.swift */,
+				987F68F129285A3600E48C18 /* CityCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		987E4C4F2938999100060FD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9898318D29308E3C00F24C83 /* PlanHeaderView.swift */,
+				989831912930AED800F24C83 /* PlanFooterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -466,11 +504,13 @@
 				4AEBEA182938710300BCA2B4 /* Environment.swift in Sources */,
 				987F68F229285A3600E48C18 /* CityCollectionViewCell.swift in Sources */,
 				4A585CE22925399E0090013A /* SceneDelegate.swift in Sources */,
+				987E4C49293884B600060FD1 /* UserRequestDto.swift in Sources */,
 				85A88AE92938894F0009D6F8 /* TravelTableViewCell.swift in Sources */,
 				85C0F0E3292931A4001580D2 /* RecentTableViewCell.swift in Sources */,
 				85A88AEB2938ACA00009D6F8 /* MyTravelModel.swift in Sources */,
 				85FE40CF292EABC7007E5723 /* PopularCollectionViewCell.swift in Sources */,
 				85FE40C0292B7405007E5723 /* MyProfileViewController.swift in Sources */,
+				987E4C4B293888C900060FD1 /* UserResponseDto.swift in Sources */,
 				85FE40D5293046F9007E5723 /* RecentImageModel.swift in Sources */,
 				85FE40DF2930795B007E5723 /* IconModel.swift in Sources */,
 				987F68F02928528100E48C18 /* CityGridViewController.swift in Sources */,

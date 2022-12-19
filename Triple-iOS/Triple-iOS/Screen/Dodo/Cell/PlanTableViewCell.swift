@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import Moya
 
 // MARK: - ListTableViewCell
 class PlanTableViewCell: UITableViewCell, UITextFieldDelegate {
@@ -24,14 +25,13 @@ class PlanTableViewCell: UITableViewCell, UITextFieldDelegate {
         return view
     }()
     
-    let timeTextField: UITextField = {
+    public let timeTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .white
         textField.placeholder = "00:00"
         textField.font = UIFont(name: "", size: 12)
         return textField
     }()
-    
     
     private let circleImgView = UIImageView()
     
@@ -42,6 +42,9 @@ class PlanTableViewCell: UITableViewCell, UITextFieldDelegate {
         textField.font = UIFont(name: "", size: 12)
         return textField
     }()
+    
+    var delegate: PlanListDelegate?
+    var index: IndexPath?
     
     // MARK: - View Life Cycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -90,6 +93,16 @@ extension PlanTableViewCell {
             $0.top.bottom.equalTo(timeTextField)
         }
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let index = self.index else { return }
+        guard let time = self.timeTextField.text else { return }
+        guard let content = self.contentTextField.text else { return }
+        let list = PlanList(dayID: index.section + 1, time: time, content: content)
+        print(list)
+        delegate?.addPlanList(plan: list, index: index.section * 3 + index.row)
+    }
+
     
     private func configImageView(){
         circleImgView.image = UIImage(named: "circle")
