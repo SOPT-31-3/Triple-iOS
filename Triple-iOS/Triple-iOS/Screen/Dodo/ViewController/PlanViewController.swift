@@ -75,9 +75,9 @@ class PlanViewController: UIViewController {
         return tableView
     }()
     
-    let userProvider = MoyaProvider<Router>(
-            plugins: [NetworkLoggerPlugin(verbose: true)]
-        }
+//    let userProvider = MoyaProvider<Router>(
+//            plugins: [NetworkLoggerPlugin(verbose: true)]
+//        }
     
     func presentToHome() {
         let nextVC = TabBarController()
@@ -85,6 +85,8 @@ class PlanViewController: UIViewController {
         nextVC.modalTransitionStyle = .crossDissolve
         self.present(nextVC, animated: true, completion: nil)
     }
+    
+    var resultArray: [PlanList] = []
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -176,25 +178,28 @@ extension PlanViewController: PlanListDelegate {
     }
     
     func addPlanList(plan: PlanList) {
-        
+        if (plan.content != ""){
+            resultArray.append(plan)
+        }
+        print(resultArray)
     }
     
-    private func save(param: [PlanList]) {
-            userProvider.request(.save(param: param)) { response in
-                switch response {
-                case .success(let result):
-                    print("성공")
-                    let status = result.statusCode
-                    if status >= 200 && status < 300 {
-                        let call = PlanViewController()
-                        call.presentToHome()
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
-                    print("실패")
-                }
-            }
-        }
+//    private func save(param: [PlanList]) {
+//            userProvider.request(.save(param: param)) { response in
+//                switch response {
+//                case .success(let result):
+//                    print("성공")
+//                    let status = result.statusCode
+//                    if status >= 200 && status < 300 {
+//                        let call = PlanViewController()
+//                        call.presentToHome()
+//                    }
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//                    print("실패")
+//                }
+//            }
+//        }
     
     private func configButton(){
         closeButton.setBackgroundImage(Constant.Image.icX, for: .normal)
