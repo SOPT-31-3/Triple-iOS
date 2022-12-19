@@ -77,8 +77,7 @@ class PlanViewController: UIViewController {
     
 //    let userProvider = MoyaProvider<Router>(
 //            plugins: [NetworkLoggerPlugin(verbose: true)]
-//        )
-    
+//        }
     
     func presentToHome() {
         let nextVC = TabBarController()
@@ -101,10 +100,6 @@ class PlanViewController: UIViewController {
 
 // MARK: - Extension
 extension PlanViewController: PlanListDelegate {
-    func addPlanList(plan: PlanList, index: Int) {
-        let pleaseList = plan
-        let pleaseIndex = index
-    }
     
     // MARK: - Layout Helper
     
@@ -155,9 +150,6 @@ extension PlanViewController: PlanListDelegate {
     }
     
     // MARK: - General Helper
-    
-    
-    
     private func config() {
         view.backgroundColor = .white
     }
@@ -175,10 +167,20 @@ extension PlanViewController: PlanListDelegate {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
     @objc
     private func touchupSaveButton(){
         let planCell = PlanTableViewCell()
         planCell.delegate = self
+        presentToHome()
+    }
+    
+    // 헤더라벨에 텍스트 바뀌게 했는ㄷㅔ 안바뀜..
+    func addPlanList(plan: PlanList, index: Int) {
+        print("테스트")
+        print(plan.content)
+        print(plan)
+        print(index)
     }
     
 //    private func save(param: [PlanList]) {
