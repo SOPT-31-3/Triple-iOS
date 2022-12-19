@@ -75,9 +75,9 @@ class PlanViewController: UIViewController {
         return tableView
     }()
     
-//    let userProvider = MoyaProvider<Router>(
-//            plugins: [NetworkLoggerPlugin(verbose: true)]
-//        }
+    let userProvider = MoyaProvider<Router>(
+            plugins: [NetworkLoggerPlugin(verbose: true)]
+            )
     
     func presentToHome() {
         let nextVC = TabBarController()
@@ -87,6 +87,7 @@ class PlanViewController: UIViewController {
     }
     
     var resultArray: [PlanList] = []
+    var responseData: SaveResponsetDto?
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -172,9 +173,7 @@ extension PlanViewController: PlanListDelegate {
     
     @objc
     private func touchupSaveButton(){
-        let planCell = PlanTableViewCell()
-        planCell.delegate = self
-        presentToHome()
+        save(param: resultArray)
     }
     
     func addPlanList(plan: PlanList) {
@@ -184,22 +183,24 @@ extension PlanViewController: PlanListDelegate {
         print(resultArray)
     }
     
-//    private func save(param: [PlanList]) {
-//            userProvider.request(.save(param: param)) { response in
-//                switch response {
-//                case .success(let result):
-//                    print("성공")
-//                    let status = result.statusCode
-//                    if status >= 200 && status < 300 {
-//                        let call = PlanViewController()
-//                        call.presentToHome()
-//                    }
-//                case .failure(let error):
-//                    print(error.localizedDescription)
-//                    print("실패")
-//                }
-//            }
-//        }
+    private func save(param: [PlanList]) {
+        userProvider.request(.save(param: param)) { response in
+            switch response {
+            case .success(let result):
+                do {
+                    self.responseData = try result.map(SaveResponsetDto.self)
+                    self.responseData?.data?.id
+                }
+                catch(let error) {
+                    print(error.localizedDescription)
+                }
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                print("실패")
+            }
+            }
+        }
     
     private func configButton(){
         closeButton.setBackgroundImage(Constant.Image.icX, for: .normal)
@@ -210,6 +211,7 @@ extension PlanViewController: PlanListDelegate {
         menuImgView.image = UIImage(named: "menu")
     }
 }
+
 
 // MARK: - UITableViewDataSource
 extension PlanViewController: UITableViewDataSource {

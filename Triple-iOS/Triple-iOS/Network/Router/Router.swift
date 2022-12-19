@@ -11,7 +11,7 @@ import UIKit
 import Moya
 
 enum Router {
-    case save(param: SaveRequestDto)
+    case save(param: [PlanList])
 }
 
 extension Router: TargetType {
